@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class OutfitSelect : MonoBehaviour
+public class HairstyleSelect : MonoBehaviour
 {
-    public OutfitDatabase db;
+    public HairstyleDatabase db;
     public SpriteRenderer SkinsUsed;
     private int selectedOption = 0;
 
@@ -18,14 +18,14 @@ public class OutfitSelect : MonoBehaviour
     public float swipeRange;
     public float tapRange;
 
-    private void updateOutfit(int selectedOption)
+    private void updateHairstyle(int selectedOption)
     {
-        Outfit outfit = db.GetOutfit(selectedOption);
-        SkinsUsed.sprite = outfit.OutfitLook;
+        Hairstyle hairstyle = db.GetHairstyle(selectedOption);
+        SkinsUsed.sprite = hairstyle.HairstyleLook;
     }
     public void Swipe()
     {
-        if (SelectButton.OutfitTurn)
+        if (SelectButton.Hairturn)
         {
             if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
             {
@@ -44,26 +44,26 @@ public class OutfitSelect : MonoBehaviour
                             return;
                         else
                             selectedOption--;
-                        updateOutfit(selectedOption);
+                        updateHairstyle(selectedOption);
                         stopTouch = true;
                     }
                     else if (Distance.x > swipeRange)
                     {
-                        if (selectedOption == 13)
+                        if (selectedOption == 10)
                             return;
                         else
                             selectedOption++;
-                        updateOutfit(selectedOption);
+                        updateHairstyle(selectedOption);
                         stopTouch = true;
                     }
                 }
             }
-            if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Ended)
-            {
-                stopTouch = false;
-                endTouchPos = Input.GetTouch(0).position;
-                Vector2 Distance = endTouchPos - startTouchPos;
-            }
+        }
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Ended)
+        {
+            stopTouch = false;
+            endTouchPos = Input.GetTouch(0).position;
+            Vector2 Distance = endTouchPos - startTouchPos;
         }
     }
     private void Update()
