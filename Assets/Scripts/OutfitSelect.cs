@@ -49,7 +49,7 @@ public class OutfitSelect : MonoBehaviour
                     }
                     else if (Distance.x > swipeRange)
                     {
-                        if (selectedOption == 13)
+                        if (selectedOption == db.outfits.Length)
                             return;
                         else
                             selectedOption++;

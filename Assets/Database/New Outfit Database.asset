@@ -17,55 +17,99 @@ MonoBehaviour:
     isModern: 0
     isCasual: 0
     OutfitLook: {fileID: 21300000, guid: 4ecbe7bd6828ec34e8b2f51c0e13fa97, type: 3}
+    value: 0
   - isTraditional: 1
     isModern: 0
     isCasual: 0
     OutfitLook: {fileID: 21300000, guid: bcf90ddbd08dedf47b691feb44506231, type: 3}
+    value: 0
   - isTraditional: 1
     isModern: 0
     isCasual: 0
     OutfitLook: {fileID: 21300000, guid: 48930b4793f013e438669c470932e559, type: 3}
+    value: 0
   - isTraditional: 1
     isModern: 0
     isCasual: 0
     OutfitLook: {fileID: 21300000, guid: 61cd9053eda2b714288fa5e4bb4afa62, type: 3}
+    value: 0
   - isTraditional: 1
     isModern: 0
     isCasual: 0
     OutfitLook: {fileID: 21300000, guid: 382cd5d2c87070345920eb2715d7b19d, type: 3}
+    value: 0
   - isTraditional: 1
     isModern: 0
     isCasual: 0
     OutfitLook: {fileID: 21300000, guid: c17e5052d71853448a3f62d2d18fedff, type: 3}
+    value: 0
   - isTraditional: 1
     isModern: 0
     isCasual: 0
     OutfitLook: {fileID: 21300000, guid: 465e59c2f65f36f4c9254f8152011db6, type: 3}
+    value: 0
   - isTraditional: 1
     isModern: 0
     isCasual: 0
     OutfitLook: {fileID: 21300000, guid: a9af3462d5df0f2428101bd1c4f29b99, type: 3}
+    value: 0
   - isTraditional: 1
     isModern: 0
     isCasual: 0
     OutfitLook: {fileID: 21300000, guid: 6cd2b28ff39167d4c9336ac1c722f519, type: 3}
+    value: 0
   - isTraditional: 1
     isModern: 0
     isCasual: 0
     OutfitLook: {fileID: 21300000, guid: f8c4d57b16e286545baac092600e2bb6, type: 3}
+    value: 0
   - isTraditional: 1
     isModern: 0
     isCasual: 0
     OutfitLook: {fileID: 21300000, guid: 600b318316299a04e98f46c451d5e0a8, type: 3}
+    value: 0
   - isTraditional: 1
     isModern: 0
     isCasual: 0
     OutfitLook: {fileID: 21300000, guid: 4c6ade8ed45bb8c4db67ed45416c8650, type: 3}
+    value: 0
   - isTraditional: 1
     isModern: 0
     isCasual: 0
     OutfitLook: {fileID: 21300000, guid: e765c37e010ee0146bf18245a839889b, type: 3}
+    value: 0
   - isTraditional: 1
     isModern: 0
     isCasual: 0
     OutfitLook: {fileID: 21300000, guid: da6974a07b8184848b306fdf9a7c8924, type: 3}
+    value: 0
+  - isTraditional: 0
+    isModern: 1
+    isCasual: 0
+    OutfitLook: {fileID: 21300000, guid: 9e87a89812d41254c818c760ae088092, type: 3}
+    value: 0
+  - isTraditional: 0
+    isModern: 1
+    isCasual: 0
+    OutfitLook: {fileID: 21300000, guid: 2a4050fca7ce4b6478ef401c503cb32b, type: 3}
+    value: 0
+  - isTraditional: 0
+    isModern: 1
+    isCasual: 0
+    OutfitLook: {fileID: 21300000, guid: 867da5b50291b1448997921edeee75c8, type: 3}
+    value: 0
+  - isTraditional: 0
+    isModern: 0
+    isCasual: 1
+    OutfitLook: {fileID: 21300000, guid: e7a4761fc1d88b240b8a479236d951ea, type: 3}
+    value: 0
+  - isTraditional: 0
+    isModern: 1
+    isCasual: 0
+    OutfitLook: {fileID: 21300000, guid: e0d1a5efc1e07ac489f485086757dd8d, type: 3}
+    value: 0
+  - isTraditional: 0
+    isModern: 0
+    isCasual: 1
+    OutfitLook: {fileID: 21300000, guid: 609c070fc4fbabc44a550d3567004001, type: 3}
+    value: 0
