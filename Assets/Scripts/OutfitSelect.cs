@@ -18,10 +18,32 @@ public class OutfitSelect : MonoBehaviour
     public float swipeRange;
     public float tapRange;
 
+    private void Awake()
+    {
+        foreach (Outfit o in db.outfits)
+        {
+            if (o.isTraditional)
+            {
+                o.value = Random.Range(1, 3);
+                Debug.Log("Selected outfit value: " + o.value);
+            }
+            else if (o.isModern)
+            {
+                o.value = Random.Range(4, 6);
+                Debug.Log("Selected outfit value: " + o.value);
+            }
+            else if (o.isCasual)
+            {
+                o.value = Random.Range(7, 10);
+                Debug.Log("Selected outfit value: " + o.value);
+            }
+        }
+    }
     private void updateOutfit(int selectedOption)
     {
         Outfit outfit = db.GetOutfit(selectedOption);
         SkinsUsed.sprite = outfit.OutfitLook;
+
     }
     public void Swipe()
     {
@@ -69,5 +91,6 @@ public class OutfitSelect : MonoBehaviour
     private void Update()
     {
         Swipe();
+
     }
 }

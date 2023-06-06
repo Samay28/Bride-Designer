@@ -7,16 +7,23 @@ using UnityEngine.UI;
 public class OutfitDatabase : ScriptableObject
 {
     public Outfit[] outfits;
+    private void Start()
+    {
+
+    }
     public int OutfitCount
     {
-        get{
+        get
+        {
             return outfits.Length;
         }
     }
-    public Outfit GetOutfit(int index) {
+    public Outfit GetOutfit(int index)
+    {
         {
             return outfits[index];
         }
     }
-  
+
+
 }
