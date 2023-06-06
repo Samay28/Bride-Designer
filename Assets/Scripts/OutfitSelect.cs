@@ -18,10 +18,11 @@ public class OutfitSelect : MonoBehaviour
     public float swipeRange;
     public float tapRange;
 
-    private void Awake()
+    private void Start()
     {
         foreach (Outfit o in db.outfits)
-        {
+        {   
+            if(GameManager.IsLevel1)
             if (o.isTraditional)
             {
                 o.value = Random.Range(1, 3);

@@ -5,15 +5,18 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    public bool IsLevel1;
+    public static bool IsLevel1;
     private void Awake()
     {
         if (instance == null)
+        {
             instance = this;
+        }
+        IsLevel1 = true;
     }
     private void Start()
     {
-        IsLevel1 = true;
+        
     }
 
     // Update is called once per frame
