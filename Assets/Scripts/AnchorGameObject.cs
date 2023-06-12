@@ -18,7 +18,7 @@ public class AnchorGameObject : MonoBehaviour
     };
     public AnchorType anchorType;
     public Vector3 anchorOffset;
- 
+
 
     IEnumerator updateAnchorRoutine; //Coroutine handle so we don't start it if it's already running
 
@@ -42,7 +42,7 @@ public class AnchorGameObject : MonoBehaviour
         }
         if (cameraWaitCycles > 0)
         {
-            print(string.Format("CameraAnchor found ViewportHandler instance after waiting {0} frame(s). You might want to check that ViewportHandler has an earlie execution order.", cameraWaitCycles));
+            print(string.Format("CameraAnchor found ViewportHandler instance after waiting {0} frame(s). You might want to check that ViewportHandler has an earlier execution order.", cameraWaitCycles));
         }
         UpdateAnchor();
         updateAnchorRoutine = null;
@@ -85,22 +85,20 @@ public class AnchorGameObject : MonoBehaviour
     void SetAnchor(Vector3 anchor)
     {
         Vector3 newPos = anchor + anchorOffset;
+
         if (!transform.position.Equals(newPos))
         {
             transform.position = newPos;
         }
-
-
     }
 
 #if UNITY_EDITOR
-	// Update is called once per frame
-	void Update () {
-		if (updateAnchorRoutine == null) {
-			updateAnchorRoutine = UpdateAnchorAsync();
-			StartCoroutine(updateAnchorRoutine);
-			
-		}
-	}
+    // Update is called once per frame
+    void Update () {
+        if (updateAnchorRoutine == null) {
+            updateAnchorRoutine = UpdateAnchorAsync();
+            StartCoroutine(updateAnchorRoutine);
+        }
+    }
 #endif
 }

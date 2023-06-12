@@ -17,49 +17,59 @@ MonoBehaviour:
     isModern: 1
     isCasual: 0
     OutfitLook: {fileID: 21300000, guid: d9b7f7bbb80145d47bc0502b293578dd, type: 3}
-    value: 0
+    value: 5
   - isTraditional: 1
     isModern: 0
     isCasual: 0
     OutfitLook: {fileID: 21300000, guid: bcf90ddbd08dedf47b691feb44506231, type: 3}
-    value: 0
+    value: 2
   - isTraditional: 0
     isModern: 1
     isCasual: 0
     OutfitLook: {fileID: 21300000, guid: 7e956248df52223469686444cdf17b68, type: 3}
-    value: 0
+    value: 5
   - isTraditional: 1
     isModern: 0
     isCasual: 0
     OutfitLook: {fileID: 21300000, guid: 48930b4793f013e438669c470932e559, type: 3}
-    value: 0
+    value: 1
   - isTraditional: 0
     isModern: 1
     isCasual: 0
     OutfitLook: {fileID: 21300000, guid: 47cd20e2b8112a947bd6985c8cc3f6d6, type: 3}
-    value: 0
+    value: 4
   - isTraditional: 1
     isModern: 0
     isCasual: 0
     OutfitLook: {fileID: 21300000, guid: 61cd9053eda2b714288fa5e4bb4afa62, type: 3}
-    value: 0
+    value: 1
   - isTraditional: 0
     isModern: 1
     isCasual: 0
-    OutfitLook: {fileID: 21300000, guid: 5a2dd8e21603bb047985d99622659620, type: 3}
-    value: 0
+    OutfitLook: {fileID: 21300000, guid: 9bc8c1531ba482a4abfa3fb19de9b41b, type: 3}
+    value: 4
   - isTraditional: 1
     isModern: 0
     isCasual: 0
     OutfitLook: {fileID: 21300000, guid: 382cd5d2c87070345920eb2715d7b19d, type: 3}
-    value: 0
+    value: 1
   - isTraditional: 0
     isModern: 1
     isCasual: 0
-    OutfitLook: {fileID: 21300000, guid: f7b06eeab5a371e4596d2de4e8e32f92, type: 3}
-    value: 0
+    OutfitLook: {fileID: 21300000, guid: c262f0c569963ec42bbb88b0a422b705, type: 3}
+    value: 5
   - isTraditional: 1
     isModern: 0
     isCasual: 0
     OutfitLook: {fileID: 21300000, guid: c17e5052d71853448a3f62d2d18fedff, type: 3}
-    value: 0
+    value: 1
+  - isTraditional: 0
+    isModern: 0
+    isCasual: 1
+    OutfitLook: {fileID: 21300000, guid: ac879590e9e65cf4882064e457075640, type: 3}
+    value: 9
+  - isTraditional: 0
+    isModern: 0
+    isCasual: 1
+    OutfitLook: {fileID: 21300000, guid: 3104228c38ff82f479f50bb90643c0b4, type: 3}
+    value: 8

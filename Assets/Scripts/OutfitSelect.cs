@@ -93,6 +93,7 @@ public class OutfitSelect : MonoBehaviour
     private void Update()
     {
         Swipe();
+        
 
     }
 }
