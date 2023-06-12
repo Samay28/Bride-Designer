@@ -17,6 +17,10 @@ public class HairstyleSelect : MonoBehaviour
     bool stopTouch = false;
     public float swipeRange;
     public float tapRange;
+    private void Start()
+    {
+        updateHairstyle(0);
+    }
 
     private void updateHairstyle(int selectedOption)
     {

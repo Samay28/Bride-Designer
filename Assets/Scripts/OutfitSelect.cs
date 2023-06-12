@@ -39,6 +39,7 @@ public class OutfitSelect : MonoBehaviour
                 Debug.Log("Selected outfit value: " + o.value);
             }
         }
+        updateOutfit(0);
     }
     private void updateOutfit(int selectedOption)
     {
@@ -72,7 +73,7 @@ public class OutfitSelect : MonoBehaviour
                     }
                     else if (Distance.x > swipeRange)
                     {
-                        if (selectedOption == db.outfits.Length)
+                        if (selectedOption == db.outfits.Length-1)
                             return;
                         else
                             selectedOption++;
