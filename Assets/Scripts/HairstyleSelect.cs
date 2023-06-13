@@ -10,7 +10,7 @@ public class HairstyleSelect : MonoBehaviour
     public SpriteRenderer SkinsUsed;
     private int selectedOption = 0;
 
-    //swipe
+    int selectedhairValue;
     Vector2 startTouchPos;
     Vector2 currentTouchPos;
     Vector2 endTouchPos;
@@ -18,12 +18,17 @@ public class HairstyleSelect : MonoBehaviour
     public float swipeRange;
     public float tapRange;
     private void Start()
-    {
+    {   
+        foreach(Hairstyle h in db.Hairstyles)
+        {
+            h.value = Random.Range(1,10);
+        }
         updateHairstyle(0);
     }
 
     private void updateHairstyle(int selectedOption)
-    {
+    {   
+        this.selectedOption = selectedOption;
         Hairstyle hairstyle = db.GetHairstyle(selectedOption);
         SkinsUsed.sprite = hairstyle.HairstyleLook;
     }
@@ -73,5 +78,11 @@ public class HairstyleSelect : MonoBehaviour
     private void Update()
     {
         Swipe();
+    }
+     public  void  OnLockHairstyle()
+    {   
+        Hairstyle hairstyle = db.GetHairstyle(selectedOption);
+        selectedhairValue = hairstyle.value;
+        Debug.Log("this is the score " + selectedhairValue);
     }
 }

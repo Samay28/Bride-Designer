@@ -6,9 +6,7 @@ using UnityEngine;
 public class Hairstyle
     // Start is called before the first frame update
 {
-    public bool isTraditional;
-    public bool isModern;
-    public bool isCasual;
     public Sprite HairstyleLook;
+    public int value;
 }
 
