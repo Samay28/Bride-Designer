@@ -45,7 +45,6 @@ public class OutfitSelect : MonoBehaviour
     {
         Outfit outfit = db.GetOutfit(selectedOption);
         SkinsUsed.sprite = outfit.OutfitLook;
-
     }
     public void Swipe()
     {
