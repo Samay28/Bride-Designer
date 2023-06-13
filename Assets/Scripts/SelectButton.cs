@@ -8,6 +8,7 @@ public class SelectButton : MonoBehaviour
     public static bool OutfitTurn = false;   
     public GameObject DesignPanel;
     public GameObject MakeupPanel;
+    public GameObject Subdiv;
 
     void Awake()
     {
@@ -15,6 +16,7 @@ public class SelectButton : MonoBehaviour
        OutfitTurn = false;
        DesignPanel.SetActive(true);
        MakeupPanel.SetActive(false);
+       Subdiv.SetActive(false);
     }
 
     // Update is called once per frame
@@ -26,11 +28,14 @@ public class SelectButton : MonoBehaviour
     {
         Hairturn = true;
         OutfitTurn = false;
+        Subdiv.SetActive(false);
     }
     public void OutfitButton()
     {
         OutfitTurn = true;
         Hairturn = false;
+        Subdiv.SetActive(true);
+
     }
     public void NextButton()
     {

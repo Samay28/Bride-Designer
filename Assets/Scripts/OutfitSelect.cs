@@ -92,8 +92,24 @@ public class OutfitSelect : MonoBehaviour
     }
     private void Update()
     {
-        Swipe();
-        
+        Swipe();    
 
     }
+    public void OnClickTradButton()
+    {   
+        selectedOption = 0;
+        updateOutfit(selectedOption);
+    }
+     public void OnClickCasualButton()
+    {   
+        selectedOption = 10;
+        updateOutfit(selectedOption);
+    }
+    public void OnClickModernButton()
+    {   
+        selectedOption = 20;
+        updateOutfit(selectedOption);
+    }
+    
+
 }
