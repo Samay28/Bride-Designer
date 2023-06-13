@@ -2160,6 +2160,7 @@ MonoBehaviour:
   DesignPanel: {fileID: 1920721828}
   MakeupPanel: {fileID: 378089876}
   Subdiv: {fileID: 1720042492}
+  os: {fileID: 173072491}
 --- !u!1 &1825365507
 GameObject:
   m_ObjectHideFlags: 0

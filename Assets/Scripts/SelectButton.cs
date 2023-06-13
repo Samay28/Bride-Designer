@@ -5,24 +5,25 @@ using UnityEngine;
 public class SelectButton : MonoBehaviour
 {
     public static bool Hairturn = true;
-    public static bool OutfitTurn = false;   
+    public static bool OutfitTurn = false;
     public GameObject DesignPanel;
     public GameObject MakeupPanel;
     public GameObject Subdiv;
+    public OutfitSelect os;
 
     void Awake()
     {
-       Hairturn = true;
-       OutfitTurn = false;
-       DesignPanel.SetActive(true);
-       MakeupPanel.SetActive(false);
-       Subdiv.SetActive(false);
+        Hairturn = true;
+        OutfitTurn = false;
+        DesignPanel.SetActive(true);
+        MakeupPanel.SetActive(false);
+        Subdiv.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     public void HairButton()
     {
@@ -43,6 +44,7 @@ public class SelectButton : MonoBehaviour
         DesignPanel.SetActive(false);
         OutfitTurn = false;
         Hairturn = false;
+        os.OnLockOutfit();
     }
 
 }
