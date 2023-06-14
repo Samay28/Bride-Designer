@@ -2,17 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EyebrowsDatabase : MonoBehaviour
+[CreateAssetMenu]
+public class EyebrowsDatabase : ScriptableObject
 {
-    // Start is called before the first frame update
-    void Start()
+    
+    public Eyebrows[] eyebrows;
+    public int eyebrowsCount
     {
-        
+        get
+        {
+            return eyebrows.Length;
+        }
     }
-
-    // Update is called once per frame
-    void Update()
+    public Eyebrows GetEyebrows(int index)
     {
-        
+        {
+            return eyebrows[index];
+        }
     }
 }

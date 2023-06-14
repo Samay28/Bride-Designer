@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3c591304b85d604f80de20320b97b01, type: 3}
+  m_Name: New Eyebrows Database
+  m_EditorClassIdentifier: 
+  eyebrows:
+  - EyebrowLook: {fileID: 0}
+    value: 9
+  - EyebrowLook: {fileID: 21300000, guid: 418d6fd71fbbd16428e963bd9ff1439d, type: 3}
+    value: 7
+  - EyebrowLook: {fileID: 21300000, guid: 3a8b8386214c2d540907e51bcbd2bf89, type: 3}
+    value: 7
+  - EyebrowLook: {fileID: 21300000, guid: f4c588071c39dda409e5aa9800773ff8, type: 3}
+    value: 6
+  - EyebrowLook: {fileID: 21300000, guid: 811ae750203e407488235867831db927, type: 3}
+    value: 5
+  - EyebrowLook: {fileID: 21300000, guid: 9ceb31fc452ccc34aacb0b526733db8b, type: 3}
+    value: 9
+  - EyebrowLook: {fileID: 21300000, guid: f582b4ec61d62e247b5718b942a4feec, type: 3}
+    value: 8
+  - EyebrowLook: {fileID: 21300000, guid: 552dcbce035488a44b71babe9c806506, type: 3}
+    value: 5
+  - EyebrowLook: {fileID: 21300000, guid: a79c15bfe02fbea4c959b5c66aab0bc9, type: 3}
+    value: 7
+  - EyebrowLook: {fileID: 21300000, guid: a7bd00e6ad2ed8a4baaf5404690e46db, type: 3}
+    value: 9
