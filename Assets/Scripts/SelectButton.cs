@@ -6,10 +6,11 @@ public class SelectButton : MonoBehaviour
 {
     public static bool Hairturn = true;
     public static bool OutfitTurn = false;
+    public static bool JewelTurn = false;
     public GameObject DesignPanel;
     public GameObject MakeupPanel;
     public GameObject Subdiv;
-    public OutfitSelect os;
+
 
     void Awake()
     {
@@ -44,7 +45,13 @@ public class SelectButton : MonoBehaviour
         DesignPanel.SetActive(false);
         OutfitTurn = false;
         Hairturn = false;
-        os.OnLockOutfit();
+    }
+    public void JewelButton()
+    {
+        OutfitTurn = false;
+        Hairturn = false;
+        JewelTurn = true;
+
     }
 
 }

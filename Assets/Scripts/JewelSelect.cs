@@ -4,12 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class OutfitSelect : MonoBehaviour
+public class JewelSelect : MonoBehaviour
 {
-    public OutfitDatabase db;
+    public JewelleryDatabase db;
     public SpriteRenderer SkinsUsed;
     private int selectedOption = 0;
-    public static int selectedOutfitValue;
+    public static int selectedJewelValue;
 
     //swipe
     Vector2 startTouchPos;
@@ -21,37 +21,23 @@ public class OutfitSelect : MonoBehaviour
 
     private void Start()
     {
-        foreach (Outfit o in db.outfits)
+        foreach (Jewellery j in db.Jewelleries)
         {
             if (GameManager.IsLevel1)
-                if (o.isTraditional)
-                {
-                    o.value = Random.Range(1, 3);
-
-                }
-                else if (o.isModern)
-                {
-                    o.value = Random.Range(4, 6);
-
-                }
-                else if (o.isCasual)
-                {
-                    o.value = Random.Range(7, 10);
-
-                }
+                j.value = Random.Range(4, 10);
         }
-        updateOutfit(0);
+        updateJewel(0);
     }
-    private void updateOutfit(int selectedOption)
+    private void updateJewel(int selectedOption)
     {
         this.selectedOption = selectedOption;
-        Outfit outfit = db.GetOutfit(selectedOption);
-        SkinsUsed.sprite = outfit.OutfitLook;
+        Jewellery jewellery = db.GetJewellery(selectedOption);
+        SkinsUsed.sprite = jewellery.JewelleryLook;
 
     }
     public void Swipe()
     {
-        if (SelectButton.OutfitTurn)
+        if (SelectButton.JewelTurn)
         {
             if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
             {
@@ -70,16 +56,16 @@ public class OutfitSelect : MonoBehaviour
                             return;
                         else
                             selectedOption--;
-                        updateOutfit(selectedOption);
+                        updateJewel(selectedOption);
                         stopTouch = true;
                     }
                     else if (Distance.x > swipeRange)
                     {
-                        if (selectedOption == db.outfits.Length - 1)
+                        if (selectedOption == db.Jewelleries.Length - 1)
                             return;
                         else
                             selectedOption++;
-                        updateOutfit(selectedOption);
+                        updateJewel(selectedOption);
                         stopTouch = true;
                     }
                 }
@@ -97,27 +83,12 @@ public class OutfitSelect : MonoBehaviour
         Swipe();
 
     }
-    public void OnClickTradButton()
-    {
-        selectedOption = 0;
-        updateOutfit(selectedOption);
-    }
-    public void OnClickCasualButton()
-    {
-        selectedOption = 10;
-        updateOutfit(selectedOption);
-    }
-    public void OnClickModernButton()
-    {
-        selectedOption = 20;
-        updateOutfit(selectedOption);
-    }
 
-    public void OnLockOutfit()
+    public void OnLockJewel()
     {
-        Outfit outfit = db.GetOutfit(selectedOption);
-        selectedOutfitValue = outfit.value;
-        Debug.Log("this is the score " + selectedOutfitValue);
+        Jewellery jewellery = db.GetJewellery(selectedOption);
+        selectedJewelValue = jewellery.value;
+        Debug.Log("this is the score " + selectedJewelValue);
     }
 
 }

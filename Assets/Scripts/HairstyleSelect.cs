@@ -10,7 +10,7 @@ public class HairstyleSelect : MonoBehaviour
     public SpriteRenderer SkinsUsed;
     private int selectedOption = 0;
 
-    int selectedhairValue;
+   public static int selectedhairValue;
     Vector2 startTouchPos;
     Vector2 currentTouchPos;
     Vector2 endTouchPos;
