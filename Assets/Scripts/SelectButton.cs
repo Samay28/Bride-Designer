@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class SelectButton : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class SelectButton : MonoBehaviour
     public GameObject DesignPanel;
     public GameObject MakeupPanel;
     public GameObject Subdiv;
-
+    public PlayableDirector Anim1;
 
     void Awake()
     {
@@ -107,6 +108,7 @@ public class SelectButton : MonoBehaviour
         LipsTurn = false;
         cheeksturn = false;
         MakeupPanel.SetActive(false);
+        Anim1.Play();
     }
 
 }
