@@ -24,7 +24,7 @@ public class EyebrowSelect : MonoBehaviour
         foreach (Eyebrows e in db.eyebrows)
         {
             if (GameManager.IsLevel1)
-                e.value = Random.Range(5, 10);
+                e.value = Random.Range(3, 8);
         }
         updateyebrows(0);
     }
@@ -83,7 +83,7 @@ public class EyebrowSelect : MonoBehaviour
 
     }
 
-    public void OnLocklips()
+    public void OnLockEyebrows()
     {
         Eyebrows eyebrows = db.GetEyebrows(selectedOption);
         selectedeyebrowValue = eyebrows.value;

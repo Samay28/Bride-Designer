@@ -24,7 +24,7 @@ public class CheeksSelect : MonoBehaviour
         foreach (Cheeks c in db.cheeks)
         {
             if (GameManager.IsLevel1)
-                c.value = Random.Range(5, 10);
+                c.value = Random.Range(3, 8);
         }
         updatecheeks(0);
     }
@@ -83,7 +83,8 @@ public class CheeksSelect : MonoBehaviour
 
     }
 
-    public void OnLocklips()
+    public void OnLockCheeks
+    ()
     {
         Cheeks cheeks = db.GetCheeks(selectedOption);
         selectedcheeksValue = cheeks.value;

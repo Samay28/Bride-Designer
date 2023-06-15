@@ -24,7 +24,7 @@ public class EyelasheSelect : MonoBehaviour
         foreach (Eyelashes e in db.eyelashes)
         {
             if (GameManager.IsLevel1)
-                e.value = Random.Range(5, 10);
+                e.value = Random.Range(3, 8);
         }
         updateeye(0);
     }
@@ -84,7 +84,7 @@ public class EyelasheSelect : MonoBehaviour
 
     }
 
-    public void OnLockEye()
+    public void OnLockEyeLash()
     {
         Eyelashes eyes = db.GetEyelash(selectedOption);
         selectedeyelashValue = eyes.value;

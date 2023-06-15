@@ -24,7 +24,7 @@ public class LipsSelect : MonoBehaviour
         foreach (Lips l in db.lips)
         {
             if (GameManager.IsLevel1)
-                l.value = Random.Range(5, 10);
+                l.value = Random.Range(2, 8);
         }
         updatelips(0);
     }

@@ -99,5 +99,14 @@ public class SelectButton : MonoBehaviour
         LipsTurn = false;
         cheeksturn = false;
     }
+    public void LockButton()
+    {
+        EyeTurn = false;
+        EyelashesTurn = false;
+        EyebrowsTurn = false;
+        LipsTurn = false;
+        cheeksturn = false;
+        MakeupPanel.SetActive(false);
+    }
 
 }
