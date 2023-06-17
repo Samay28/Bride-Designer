@@ -7,4 +7,5 @@ public class Cheeks
 {
     public Sprite CheeksLook;
     public int value;
+    public bool Nothing;
 }

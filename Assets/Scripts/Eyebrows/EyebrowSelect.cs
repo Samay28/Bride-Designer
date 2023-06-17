@@ -25,6 +25,11 @@ public class EyebrowSelect : MonoBehaviour
         {
             if (GameManager.IsLevel1)
                 e.value = Random.Range(3, 8);
+            else if(GameManager.IsLevel2)
+                if(e.Nothing)
+                e.value = Random.Range(1,3);
+                else
+                e.value = Random.Range(4,8);
         }
         updateyebrows(0);
     }

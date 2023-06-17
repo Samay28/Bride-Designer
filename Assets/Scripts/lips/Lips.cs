@@ -8,4 +8,5 @@ public class Lips
 {
     public Sprite LipsLook;
     public int value;
+    public bool Nothing;
 }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
-
+using UnityEngine.SceneManagement;
 public class SelectButton : MonoBehaviour
 {
     public static bool Hairturn = true;
@@ -59,8 +59,9 @@ public class SelectButton : MonoBehaviour
         OutfitTurn = false;
         Hairturn = false;
         JewelTurn = true;
+        Subdiv.SetActive(false);
     }
-     public void EyeButton()
+    public void EyeButton()
     {
         EyeTurn = true;
         EyelashesTurn = false;
@@ -76,7 +77,7 @@ public class SelectButton : MonoBehaviour
         LipsTurn = true;
         cheeksturn = false;
     }
-      public void CheeksButton()
+    public void CheeksButton()
     {
         EyeTurn = false;
         EyelashesTurn = false;
@@ -84,7 +85,7 @@ public class SelectButton : MonoBehaviour
         LipsTurn = false;
         cheeksturn = true;
     }
-     public void EyebrowsButton()
+    public void EyebrowsButton()
     {
         EyeTurn = false;
         EyelashesTurn = false;
@@ -92,7 +93,7 @@ public class SelectButton : MonoBehaviour
         LipsTurn = false;
         cheeksturn = false;
     }
-     public void EyelashesButton()
+    public void EyelashesButton()
     {
         EyeTurn = false;
         EyelashesTurn = true;
@@ -109,6 +110,10 @@ public class SelectButton : MonoBehaviour
         cheeksturn = false;
         MakeupPanel.SetActive(false);
         Anim1.Play();
+    }
+    public void NewLevel()
+    {
+        SceneManager.LoadScene("GameScene2");
     }
 
 }

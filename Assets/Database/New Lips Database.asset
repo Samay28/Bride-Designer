@@ -15,21 +15,31 @@ MonoBehaviour:
   lips:
   - LipsLook: {fileID: 21300000, guid: 7750f2de79f5b634cbce384377a96db0, type: 3}
     value: 0
+    Nothing: 1
   - LipsLook: {fileID: 21300000, guid: f65fe00fe8c40f74f83d9a45f977171c, type: 3}
     value: 0
+    Nothing: 0
   - LipsLook: {fileID: 21300000, guid: 74669309afc1bbf4a976c446c0087fcb, type: 3}
     value: 0
+    Nothing: 0
   - LipsLook: {fileID: 21300000, guid: bcd0d0aa42ccf3e41b44d87c33e7d04c, type: 3}
     value: 0
+    Nothing: 0
   - LipsLook: {fileID: 21300000, guid: 74669309afc1bbf4a976c446c0087fcb, type: 3}
     value: 0
+    Nothing: 0
   - LipsLook: {fileID: 21300000, guid: dbe157057a69bb946861fb090da01cab, type: 3}
     value: 0
+    Nothing: 0
   - LipsLook: {fileID: 21300000, guid: b0494568585e64945b106db5bfee39d1, type: 3}
     value: 0
+    Nothing: 0
   - LipsLook: {fileID: 21300000, guid: 6c2437d134bee804cb373240c5a58647, type: 3}
     value: 0
+    Nothing: 0
   - LipsLook: {fileID: 21300000, guid: a277dfc6afc5e8a40b3df3f6a9d9eca2, type: 3}
     value: 0
+    Nothing: 0
   - LipsLook: {fileID: 21300000, guid: bfe657eaaabb1df4d998b92661fc464c, type: 3}
     value: 0
+    Nothing: 0

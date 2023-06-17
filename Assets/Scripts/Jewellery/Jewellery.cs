@@ -7,5 +7,6 @@ public class Jewellery
 {
     public Sprite JewelleryLook;
     public int value;
+    public bool Nothing;
 }
 

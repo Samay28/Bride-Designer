@@ -24,6 +24,7 @@ public class OutfitSelect : MonoBehaviour
         foreach (Outfit o in db.outfits)
         {
             if (GameManager.IsLevel1)
+            {
                 if (o.isTraditional)
                 {
                     o.value = Random.Range(1, 3);
@@ -39,6 +40,26 @@ public class OutfitSelect : MonoBehaviour
                     o.value = Random.Range(7, 10);
 
                 }
+            }
+            else if(GameManager.IsLevel2)
+            {
+                
+                if (o.isTraditional)
+                {
+                    o.value = Random.Range(1, 3);
+
+                }
+                else if (o.isModern)
+                {
+                    o.value = Random.Range(7, 10);
+
+                }
+                else if (o.isCasual)
+                {
+                    o.value = Random.Range(1, 5);
+
+                }
+            }
         }
         updateOutfit(0);
     }

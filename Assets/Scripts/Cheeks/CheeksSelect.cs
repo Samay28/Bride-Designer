@@ -22,9 +22,11 @@ public class CheeksSelect : MonoBehaviour
     private void Start()
     {
         foreach (Cheeks c in db.cheeks)
-        {
-            if (GameManager.IsLevel1)
+        {          
+                if(!c.Nothing)
                 c.value = Random.Range(3, 8);
+                else
+                c.value = Random.Range(1, 3);
         }
         updatecheeks(0);
     }

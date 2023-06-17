@@ -24,7 +24,14 @@ public class JewelSelect : MonoBehaviour
         foreach (Jewellery j in db.Jewelleries)
         {
             if (GameManager.IsLevel1)
-                j.value = Random.Range(3, 6);
+                if (j.Nothing)
+                    j.value = Random.Range(7, 9);
+                else
+                    j.value = Random.Range(3, 6);
+            else if(GameManager.IsLevel2)
+            {
+                j.value = Random.Range(4,8);
+            }
         }
         updateJewel(0);
     }

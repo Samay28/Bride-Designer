@@ -7,4 +7,5 @@ public class Eyebrows
 {
     public Sprite EyebrowLook;
     public int value;
+    public bool Nothing;
 }

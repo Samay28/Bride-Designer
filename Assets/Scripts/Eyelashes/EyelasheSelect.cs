@@ -23,7 +23,6 @@ public class EyelasheSelect : MonoBehaviour
     {
         foreach (Eyelashes e in db.eyelashes)
         {
-            if (GameManager.IsLevel1)
                 e.value = Random.Range(3, 8);
         }
         updateeye(0);
