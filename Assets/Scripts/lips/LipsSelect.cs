@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class LipsSelect : MonoBehaviour
 {
@@ -22,23 +23,18 @@ public class LipsSelect : MonoBehaviour
     private void Start()
     {
         foreach (Lips l in db.lips)
-        {
-            if (GameManager.IsLevel1)
-            if(l.Nothing)
-                l.value = Random.Range(7, 10);
+        {   
+            Scene currentScene = SceneManager.GetActiveScene();
+            if (currentScene.name == "GameScene1")
+                if (l.Nothing)
+                    l.value = Random.Range(7, 10);
+                else
+                    l.value = Random.Range(4, 7);
             else 
-                l.value = Random.Range(4, 7);
-            else if(GameManager.IsLevel2)
             {
-                l.value = Random.Range(5,10);
+                l.value = Random.Range(5, 10);
             }
-<<<<<<< HEAD
-            else if(GameManager.IsLevel3)
-            {
-                l.value = Random.Range(5,10);
-            }
-=======
->>>>>>> 61fc34ef0dce2453d57397c91e1dead912e45055
+
         }
         updatelips(0);
     }
@@ -102,11 +98,9 @@ public class LipsSelect : MonoBehaviour
     {
         Lips lips = db.GetLips(selectedOption);
         selectedlipsValue = lips.value;
-<<<<<<< HEAD
+
         Debug.Log("this is the lips score " + selectedlipsValue);
-=======
-        Debug.Log("this is the score " + selectedlipsValue);
->>>>>>> 61fc34ef0dce2453d57397c91e1dead912e45055
+
     }
 
 }

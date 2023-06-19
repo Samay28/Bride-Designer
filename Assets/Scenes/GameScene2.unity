@@ -571,12 +571,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelCleared1: 0
   MasterScore: 0
-<<<<<<< HEAD
   highscore: 0
   WeddingsDone: 0
   WeddingsRuined: 0
-=======
->>>>>>> 61fc34ef0dce2453d57397c91e1dead912e45055
   stars:
   - {fileID: 736280518}
   - {fileID: 1856649961}
@@ -584,9 +581,10 @@ MonoBehaviour:
   - {fileID: 1195245438}
   - {fileID: 1405551197}
   WhichStarHalf: 0
-  fillAmount: 0.5
+  fillAmount: 0
   ResultTxt: {fileID: 1859623636}
-  ButtonNewLevel: {fileID: 0}
+  ButtonNewLevel: {fileID: 564654829}
+  ButtonNewLevel2: {fileID: 564654829}
 --- !u!4 &276879357
 Transform:
   m_ObjectHideFlags: 0
@@ -1187,7 +1185,6 @@ MonoBehaviour:
   UnitsSize: 17
   constraint: 1
   camera: {fileID: 519420031}
-<<<<<<< HEAD
 --- !u!1 &564654829
 GameObject:
   m_ObjectHideFlags: 0
@@ -1322,8 +1319,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-=======
->>>>>>> 61fc34ef0dce2453d57397c91e1dead912e45055
 --- !u!1 &581038571
 GameObject:
   m_ObjectHideFlags: 0
@@ -2968,7 +2963,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1195245436}
   m_CullTransparentMesh: 1
-<<<<<<< HEAD
 --- !u!1 &1231325035
 GameObject:
   m_ObjectHideFlags: 0
@@ -3106,8 +3100,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1231325035}
   m_CullTransparentMesh: 1
-=======
->>>>>>> 61fc34ef0dce2453d57397c91e1dead912e45055
 --- !u!1 &1349188824
 GameObject:
   m_ObjectHideFlags: 0
@@ -4467,14 +4459,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DesignPanel: {fileID: 1920721828}
-<<<<<<< HEAD
-  DesignSelect: {fileID: 0}
+  DesignSelect: {fileID: 1821783359}
   MakeupPanel: {fileID: 378089876}
   MehndiPanel: {fileID: 0}
   MehndiSelect: {fileID: 0}
-=======
-  MakeupPanel: {fileID: 378089876}
->>>>>>> 61fc34ef0dce2453d57397c91e1dead912e45055
   Subdiv: {fileID: 1720042492}
   Anim1: {fileID: 1048984427}
 --- !u!114 &1821783362
@@ -5474,13 +5462,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 783186b90167e104db5519eb276db837, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
-  anchorType: 4
-  anchorOffset: {x: 2.05, y: -1.77, z: -6.79}
-=======
   anchorType: 5
-  anchorOffset: {x: -1.19, y: -1.77, z: -6.79}
->>>>>>> 61fc34ef0dce2453d57397c91e1dead912e45055
+  anchorOffset: {x: -2.02, y: -1.91, z: 0}
 --- !u!1 &1947101641
 GameObject:
   m_ObjectHideFlags: 0
@@ -5665,10 +5648,7 @@ RectTransform:
   m_Children:
   - {fileID: 298389126}
   - {fileID: 1859623635}
-<<<<<<< HEAD
   - {fileID: 564654830}
-=======
->>>>>>> 61fc34ef0dce2453d57397c91e1dead912e45055
   m_Father: {fileID: 2014875177}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

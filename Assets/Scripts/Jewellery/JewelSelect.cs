@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class JewelSelect : MonoBehaviour
 {
@@ -22,26 +23,26 @@ public class JewelSelect : MonoBehaviour
     private void Start()
     {
         foreach (Jewellery j in db.Jewelleries)
-        {
-            if (GameManager.IsLevel1)
+        {   
+            Scene currentScene = SceneManager.GetActiveScene();
+            if (currentScene.name=="GameScene1")
                 if (j.Nothing)
                     j.value = Random.Range(7, 9);
                 else
                     j.value = Random.Range(3, 6);
-            else if(GameManager.IsLevel2)
+            else if(currentScene.name=="GameScene2")
             {
                 j.value = Random.Range(4,8);
             }
-<<<<<<< HEAD
-            else if(GameManager.IsLevel3)
+
+            else if(currentScene.name=="GameScene3")
             {
                 if (j.Nothing)
                     j.value = Random.Range(1, 2);
                 else
                     j.value = Random.Range(3, 10);
             }
-=======
->>>>>>> 61fc34ef0dce2453d57397c91e1dead912e45055
+
         }
         updateJewel(0);
     }
@@ -105,11 +106,9 @@ public class JewelSelect : MonoBehaviour
     {
         Jewellery jewellery = db.GetJewellery(selectedOption);
         selectedJewelValue = jewellery.value;
-<<<<<<< HEAD
+
         Debug.Log("this is the jewel score " + selectedJewelValue);
-=======
-        Debug.Log("this is the score " + selectedJewelValue);
->>>>>>> 61fc34ef0dce2453d57397c91e1dead912e45055
+
     }
 
 }
