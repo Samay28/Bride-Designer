@@ -32,6 +32,7 @@ public class JewelSelect : MonoBehaviour
             {
                 j.value = Random.Range(4,8);
             }
+<<<<<<< HEAD
             else if(GameManager.IsLevel3)
             {
                 if (j.Nothing)
@@ -39,6 +40,8 @@ public class JewelSelect : MonoBehaviour
                 else
                     j.value = Random.Range(3, 10);
             }
+=======
+>>>>>>> 61fc34ef0dce2453d57397c91e1dead912e45055
         }
         updateJewel(0);
     }
@@ -102,7 +105,11 @@ public class JewelSelect : MonoBehaviour
     {
         Jewellery jewellery = db.GetJewellery(selectedOption);
         selectedJewelValue = jewellery.value;
+<<<<<<< HEAD
         Debug.Log("this is the jewel score " + selectedJewelValue);
+=======
+        Debug.Log("this is the score " + selectedJewelValue);
+>>>>>>> 61fc34ef0dce2453d57397c91e1dead912e45055
     }
 
 }

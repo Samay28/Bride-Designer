@@ -60,6 +60,7 @@ public class OutfitSelect : MonoBehaviour
 
                 }
             }
+<<<<<<< HEAD
             else if(GameManager.IsLevel3)
             {
                 if (o.isTraditional)
@@ -78,6 +79,8 @@ public class OutfitSelect : MonoBehaviour
 
                 }
             }
+=======
+>>>>>>> 61fc34ef0dce2453d57397c91e1dead912e45055
         }
         updateOutfit(0);
     }
@@ -156,7 +159,11 @@ public class OutfitSelect : MonoBehaviour
     {
         Outfit outfit = db.GetOutfit(selectedOption);
         selectedOutfitValue = outfit.value;
+<<<<<<< HEAD
         Debug.Log("this is the outfit score " + selectedOutfitValue);
+=======
+        Debug.Log("this is the score " + selectedOutfitValue);
+>>>>>>> 61fc34ef0dce2453d57397c91e1dead912e45055
     }
 
 }

@@ -92,7 +92,11 @@ public class EyebrowSelect : MonoBehaviour
     {
         Eyebrows eyebrows = db.GetEyebrows(selectedOption);
         selectedeyebrowValue = eyebrows.value;
+<<<<<<< HEAD
         Debug.Log("this is the eyebrow score " + selectedeyebrowValue);
+=======
+        Debug.Log("this is the score " + selectedeyebrowValue);
+>>>>>>> 61fc34ef0dce2453d57397c91e1dead912e45055
     }
 
 }

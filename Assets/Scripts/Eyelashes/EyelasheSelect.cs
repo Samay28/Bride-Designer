@@ -87,7 +87,11 @@ public class EyelasheSelect : MonoBehaviour
     {
         Eyelashes eyes = db.GetEyelash(selectedOption);
         selectedeyelashValue = eyes.value;
+<<<<<<< HEAD
         Debug.Log("this is the eyelash score " + selectedeyelashValue);
+=======
+        Debug.Log("this is the score " + selectedeyelashValue);
+>>>>>>> 61fc34ef0dce2453d57397c91e1dead912e45055
     }
 
 }

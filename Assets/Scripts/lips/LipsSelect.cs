@@ -32,10 +32,13 @@ public class LipsSelect : MonoBehaviour
             {
                 l.value = Random.Range(5,10);
             }
+<<<<<<< HEAD
             else if(GameManager.IsLevel3)
             {
                 l.value = Random.Range(5,10);
             }
+=======
+>>>>>>> 61fc34ef0dce2453d57397c91e1dead912e45055
         }
         updatelips(0);
     }
@@ -99,7 +102,11 @@ public class LipsSelect : MonoBehaviour
     {
         Lips lips = db.GetLips(selectedOption);
         selectedlipsValue = lips.value;
+<<<<<<< HEAD
         Debug.Log("this is the lips score " + selectedlipsValue);
+=======
+        Debug.Log("this is the score " + selectedlipsValue);
+>>>>>>> 61fc34ef0dce2453d57397c91e1dead912e45055
     }
 
 }

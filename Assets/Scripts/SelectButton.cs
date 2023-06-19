@@ -13,6 +13,7 @@ public class SelectButton : MonoBehaviour
     public static bool EyelashesTurn = false;
     public static bool cheeksturn = false;
     public static bool LipsTurn = false;
+<<<<<<< HEAD
     public static bool LMehndiTurn = false;
     public static bool HMehndiTurn = false;
     public GameObject DesignPanel;
@@ -20,6 +21,10 @@ public class SelectButton : MonoBehaviour
     public GameObject MakeupPanel;
     public GameObject MehndiPanel;
     public GameObject MehndiSelect;
+=======
+    public GameObject DesignPanel;
+    public GameObject MakeupPanel;
+>>>>>>> 61fc34ef0dce2453d57397c91e1dead912e45055
     public GameObject Subdiv;
     public PlayableDirector Anim1;
 
@@ -42,14 +47,21 @@ public class SelectButton : MonoBehaviour
         Hairturn = true;
         OutfitTurn = false;
         Subdiv.SetActive(false);
+<<<<<<< HEAD
         JewelTurn = false;
+=======
+>>>>>>> 61fc34ef0dce2453d57397c91e1dead912e45055
     }
     public void OutfitButton()
     {
         OutfitTurn = true;
         Hairturn = false;
         Subdiv.SetActive(true);
+<<<<<<< HEAD
         JewelTurn = false;
+=======
+
+>>>>>>> 61fc34ef0dce2453d57397c91e1dead912e45055
     }
     public void NextButton()
     {
@@ -121,6 +133,7 @@ public class SelectButton : MonoBehaviour
     {
         SceneManager.LoadScene("GameScene2");
     }
+<<<<<<< HEAD
     public void LastLevel()
     {
         SceneManager.LoadScene("GameScene3");
@@ -158,4 +171,7 @@ public class SelectButton : MonoBehaviour
         LMehndiTurn = true;
     }
     
+=======
+
+>>>>>>> 61fc34ef0dce2453d57397c91e1dead912e45055
 }

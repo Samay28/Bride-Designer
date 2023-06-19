@@ -5453,8 +5453,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 783186b90167e104db5519eb276db837, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   anchorType: 4
   anchorOffset: {x: 2.05, y: -1.77, z: -6.79}
+=======
+  anchorType: 5
+  anchorOffset: {x: -1.19, y: -1.77, z: -6.79}
+>>>>>>> 61fc34ef0dce2453d57397c91e1dead912e45055
 --- !u!1 &1947101641
 GameObject:
   m_ObjectHideFlags: 0
