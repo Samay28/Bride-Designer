@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9549c57e720a8fe4f856fd8c7bfbacc1, type: 3}
+  m_Name: New Eyelashes Databse
+  m_EditorClassIdentifier: 
+  eyelashes:
+  - EyelashLook: {fileID: 0}
+    value: 5
+  - EyelashLook: {fileID: 21300000, guid: f84fe9e5689156948bbb6254373c481e, type: 3}
+    value: 6
+  - EyelashLook: {fileID: 21300000, guid: 2890b74d1d1c0d642abab3f3771af05f, type: 3}
+    value: 5
+  - EyelashLook: {fileID: 21300000, guid: b793d5df3a7c19c489c74d867b556c81, type: 3}
+    value: 9
+  - EyelashLook: {fileID: 21300000, guid: cb1f683841727e947bd1c96ea87f5617, type: 3}
+    value: 8
+  - EyelashLook: {fileID: 21300000, guid: 7bd9b387fe6ed2246baef0073424915e, type: 3}
+    value: 9
+  - EyelashLook: {fileID: 21300000, guid: 890886eba0fef9443801b8ae323bf466, type: 3}
+    value: 8
+  - EyelashLook: {fileID: 21300000, guid: c4fc9e606971f5044973a4ebb6aff24d, type: 3}
+    value: 6
+  - EyelashLook: {fileID: 21300000, guid: 7db6dc746f204734397cd82fd98fe555, type: 3}
+    value: 6
+  - EyelashLook: {fileID: 21300000, guid: 3b238d7ea5d6d3b4fa33ea930f1936ca, type: 3}
+    value: 5
+  - EyelashLook: {fileID: 21300000, guid: aa6c63a65806c8a45be997cd1bfd5c91, type: 3}
+    value: 9
+  - EyelashLook: {fileID: 21300000, guid: 316b86a2d56c652498b872132bd4e8e3, type: 3}
+    value: 7
+  - EyelashLook: {fileID: 21300000, guid: 6ace5c9104f59ff4c8adf3e4d472024b, type: 3}
+    value: 9
+  - EyelashLook: {fileID: 21300000, guid: f32520ada7346474fb423a12116192d8, type: 3}
+    value: 9
