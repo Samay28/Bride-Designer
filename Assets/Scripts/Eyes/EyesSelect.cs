@@ -87,7 +87,9 @@ public class EyesSelect : MonoBehaviour
     {
         Eyes eyes = db.GetEye(selectedOption);
         selectedeyeValue = eyes.value;
-        Debug.Log("this is the score " + selectedeyeValue);
+
+        Debug.Log("this is the eye score " + selectedeyeValue);
+
     }
 
 }

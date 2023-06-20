@@ -21,7 +21,8 @@ public class HairstyleSelect : MonoBehaviour
     {   
         foreach(Hairstyle h in db.Hairstyles)
         {
-            h.value = Random.Range(1,10);
+            h.value = Random.Range(3,10);
+
         }
         updateHairstyle(0);
     }
@@ -83,6 +84,8 @@ public class HairstyleSelect : MonoBehaviour
     {   
         Hairstyle hairstyle = db.GetHairstyle(selectedOption);
         selectedhairValue = hairstyle.value;
-        Debug.Log("this is the score " + selectedhairValue);
+
+        Debug.Log("this is the hair score " + selectedhairValue);
+
     }
 }

@@ -23,7 +23,7 @@ public class EyelasheSelect : MonoBehaviour
     {
         foreach (Eyelashes e in db.eyelashes)
         {
-                e.value = Random.Range(3, 8);
+            e.value = Random.Range(3, 8);
         }
         updateeye(0);
     }
@@ -87,7 +87,7 @@ public class EyelasheSelect : MonoBehaviour
     {
         Eyelashes eyes = db.GetEyelash(selectedOption);
         selectedeyelashValue = eyes.value;
-        Debug.Log("this is the score " + selectedeyelashValue);
+        Debug.Log("this is the eyelash score " + selectedeyelashValue);
     }
 
 }

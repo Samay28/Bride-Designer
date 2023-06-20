@@ -1,0 +1,78 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efc1f47be497e204a980fc6febaaf188, type: 3}
+  m_Name: New Leg Mehndi Database
+  m_EditorClassIdentifier: 
+  LegMehndis:
+  - LegMehndiLook: {fileID: 0}
+    value: 0
+    Nothing: 1
+  - LegMehndiLook: {fileID: 21300000, guid: 7a8e9c1c0c5fb5d4a8670e56e56abe2c, type: 3}
+    value: 0
+    Nothing: 0
+  - LegMehndiLook: {fileID: 21300000, guid: 5c36b54037df850439bdf5327f634189, type: 3}
+    value: 0
+    Nothing: 0
+  - LegMehndiLook: {fileID: 21300000, guid: 0932b87a597bf6c4f8987fa43d09e58f, type: 3}
+    value: 0
+    Nothing: 0
+  - LegMehndiLook: {fileID: 21300000, guid: e98eded967dcb5049be16167d4caa1a2, type: 3}
+    value: 0
+    Nothing: 0
+  - LegMehndiLook: {fileID: 21300000, guid: 6bbfa6a08e85f894aa905cd6ed87e395, type: 3}
+    value: 0
+    Nothing: 0
+  - LegMehndiLook: {fileID: 21300000, guid: d1bd0cec1e3e6ec4b894e8d04061149d, type: 3}
+    value: 0
+    Nothing: 0
+  - LegMehndiLook: {fileID: 21300000, guid: 85cad3e936fddab468b1d689e2c53208, type: 3}
+    value: 0
+    Nothing: 0
+  - LegMehndiLook: {fileID: 21300000, guid: 4773619b2ef170e4cba0afb8cd131cc4, type: 3}
+    value: 0
+    Nothing: 0
+  - LegMehndiLook: {fileID: 21300000, guid: b17e395ef337b094eba2ea5fe4696177, type: 3}
+    value: 0
+    Nothing: 0
+  - LegMehndiLook: {fileID: 21300000, guid: b2471c591bd98364e89cd16f711a41ad, type: 3}
+    value: 0
+    Nothing: 0
+  - LegMehndiLook: {fileID: 21300000, guid: fc0d1a7fbdb5d074dafd97da7facd29d, type: 3}
+    value: 0
+    Nothing: 0
+  - LegMehndiLook: {fileID: 21300000, guid: e5aa6cf2a00bf6447af8359b362bbe29, type: 3}
+    value: 0
+    Nothing: 0
+  - LegMehndiLook: {fileID: 21300000, guid: cbbacd7a7428b6c4eb6eed8f9e54f991, type: 3}
+    value: 0
+    Nothing: 0
+  - LegMehndiLook: {fileID: 21300000, guid: 3dab733258d2e114b920f9609df8a8fe, type: 3}
+    value: 0
+    Nothing: 0
+  - LegMehndiLook: {fileID: 21300000, guid: 3e6adca5527752a408a1103cccc2ee26, type: 3}
+    value: 0
+    Nothing: 0
+  - LegMehndiLook: {fileID: 21300000, guid: 207e64a4cbcd94b4a98f1f28ac3a4e54, type: 3}
+    value: 0
+    Nothing: 0
+  - LegMehndiLook: {fileID: 21300000, guid: e0d8b834d116fe24e93f7cd72f97d779, type: 3}
+    value: 0
+    Nothing: 0
+  - LegMehndiLook: {fileID: 21300000, guid: 5b310ce8396cbef42ae4b8c5181bfc4b, type: 3}
+    value: 0
+    Nothing: 0
+  - LegMehndiLook: {fileID: 21300000, guid: fb000b7a4730c414198a405b6bc11dc4, type: 3}
+    value: 0
+    Nothing: 0
+  - LegMehndiLook: {fileID: 21300000, guid: 7582ce397b14fc946a50e0baf90d1dd1, type: 3}
+    value: 0
+    Nothing: 0

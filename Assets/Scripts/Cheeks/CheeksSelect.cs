@@ -90,7 +90,7 @@ public class CheeksSelect : MonoBehaviour
     {
         Cheeks cheeks = db.GetCheeks(selectedOption);
         selectedcheeksValue = cheeks.value;
-        Debug.Log("this is the score " + selectedcheeksValue);
+        Debug.Log("this is the cheeks score " + selectedcheeksValue);
     }
 
 }

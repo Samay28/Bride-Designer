@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class OutfitSelect : MonoBehaviour
 {
@@ -10,8 +11,6 @@ public class OutfitSelect : MonoBehaviour
     public SpriteRenderer SkinsUsed;
     private int selectedOption = 0;
     public static int selectedOutfitValue;
-
-    //swipe
     Vector2 startTouchPos;
     Vector2 currentTouchPos;
     Vector2 endTouchPos;
@@ -21,47 +20,8 @@ public class OutfitSelect : MonoBehaviour
 
     private void Start()
     {
-        foreach (Outfit o in db.outfits)
-        {
-            if (GameManager.IsLevel1)
-            {
-                if (o.isTraditional)
-                {
-                    o.value = Random.Range(1, 3);
-
-                }
-                else if (o.isModern)
-                {
-                    o.value = Random.Range(4, 6);
-
-                }
-                else if (o.isCasual)
-                {
-                    o.value = Random.Range(7, 10);
-
-                }
-            }
-            else if(GameManager.IsLevel2)
-            {
-                
-                if (o.isTraditional)
-                {
-                    o.value = Random.Range(1, 3);
-
-                }
-                else if (o.isModern)
-                {
-                    o.value = Random.Range(7, 10);
-
-                }
-                else if (o.isCasual)
-                {
-                    o.value = Random.Range(1, 5);
-
-                }
-            }
-        }
         updateOutfit(0);
+        UpdateValuesOutfit();
     }
     private void updateOutfit(int selectedOption)
     {
@@ -138,7 +98,73 @@ public class OutfitSelect : MonoBehaviour
     {
         Outfit outfit = db.GetOutfit(selectedOption);
         selectedOutfitValue = outfit.value;
-        Debug.Log("this is the score " + selectedOutfitValue);
+
+        Debug.Log("this is the outfit score " + selectedOutfitValue);
+
+    }
+    public void UpdateValuesOutfit()
+    {
+        Scene currentScene = SceneManager.GetActiveScene();
+        foreach (Outfit o in db.outfits)
+        {
+            if (currentScene.name == "GameScene1")
+            {
+                if (o.isTraditional)
+                {
+                    o.value = Random.Range(1, 3);
+
+                }
+                else if (o.isModern)
+                {
+                    o.value = Random.Range(4, 6);
+
+                }
+                else if (o.isCasual)
+                {
+                    o.value = Random.Range(7, 10);
+
+                }
+            }
+            else if(currentScene.name == "GameScene2")
+            {
+                
+                if (o.isTraditional)
+                {
+                    o.value = Random.Range(1, 3);
+
+                }
+                else if (o.isModern)
+                {
+                    o.value = Random.Range(7, 10);
+
+                }
+                else if (o.isCasual)
+                {
+                    o.value = Random.Range(1, 5);
+
+                }
+            }
+
+            else if(currentScene.name == "GameScene3")
+            {
+                if (o.isTraditional)
+                {
+                    o.value = Random.Range(7, 10);
+
+                }
+                else if (o.isModern)
+                {
+                    o.value = Random.Range(4, 6);
+
+                }
+                else if (o.isCasual)
+                {
+                    o.value = Random.Range(1, 3);
+
+                }
+            }
+
+        }
     }
 
 }

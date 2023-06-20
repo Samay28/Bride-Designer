@@ -23,9 +23,6 @@ public class EyebrowSelect : MonoBehaviour
     {
         foreach (Eyebrows e in db.eyebrows)
         {
-            if (GameManager.IsLevel1)
-                e.value = Random.Range(3, 8);
-            else if(GameManager.IsLevel2)
                 if(e.Nothing)
                 e.value = Random.Range(1,3);
                 else
@@ -92,7 +89,9 @@ public class EyebrowSelect : MonoBehaviour
     {
         Eyebrows eyebrows = db.GetEyebrows(selectedOption);
         selectedeyebrowValue = eyebrows.value;
-        Debug.Log("this is the score " + selectedeyebrowValue);
+
+        Debug.Log("this is the eyebrow score " + selectedeyebrowValue);
+
     }
 
 }
