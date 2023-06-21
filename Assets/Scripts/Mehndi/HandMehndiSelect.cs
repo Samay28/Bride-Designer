@@ -39,9 +39,10 @@ public class HandMehndiSelect : MonoBehaviour
 
     }
     public void Swipe()
-    {
+    {   
+            if(!PauseManager.IsPaused)
         if (SelectButton.HMehndiTurn)
-        {
+        {   
             if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
             {
                 startTouchPos = Input.GetTouch(0).position;

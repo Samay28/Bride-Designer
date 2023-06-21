@@ -10,8 +10,11 @@ public class MainMenuManager : MonoBehaviour
     public TextMeshProUGUI highscore;
     public TextMeshProUGUI Rejections;
     public TextMeshProUGUI Success;
+    public GameObject MainPanel;
+    public GameObject SettingsPanel;
     void Start()
-    {
+    {   
+        PauseManager.IsPaused = false;
         if (PlayerPrefs.HasKey("highscore"))
         {
             GameManager.instance.highscore = PlayerPrefs.GetFloat("highscore");
@@ -56,5 +59,17 @@ public class MainMenuManager : MonoBehaviour
     public void Exit()
     {
         Application.Quit();
+    }
+    public void OpenSettings()
+    {   
+        PauseManager.IsPaused = true;
+        SettingsPanel.SetActive(true);
+        MainPanel.SetActive(false);
+    }
+    public void BackMain()
+    {   
+        PauseManager.IsPaused = false;
+        SettingsPanel.SetActive(false);
+        MainPanel.SetActive(true);
     }
 }

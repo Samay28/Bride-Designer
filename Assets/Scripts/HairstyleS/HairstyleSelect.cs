@@ -34,7 +34,8 @@ public class HairstyleSelect : MonoBehaviour
         SkinsUsed.sprite = hairstyle.HairstyleLook;
     }
     public void Swipe()
-    {
+    {   
+        if(!PauseManager.IsPaused)
         if (SelectButton.Hairturn)
         {
             if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
