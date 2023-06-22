@@ -6,26 +6,23 @@ using UnityEngine.UI;
 public class VolumeController : MonoBehaviour
 {
     [SerializeField] Slider VolumeSlider;
-    void Start()
+
+    private void Start()
     {
         LoadValues();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void UpdateVolume()
     {
-        float VolumeValue = VolumeSlider.value;
-        PlayerPrefs.SetFloat("VolumeValue", VolumeValue);
+        float volumeValue = VolumeSlider.value;
+        PlayerPrefs.SetFloat("VolumeValue", volumeValue);
         LoadValues();
     }
+
     public void LoadValues()
     {
-        float VolumeValue = PlayerPrefs.GetFloat("VolumeValue");
-        VolumeSlider.value = VolumeValue;
-        AudioListener.volume = VolumeValue;
+        float volumeValue = PlayerPrefs.GetFloat("VolumeValue", 0.7f);
+        VolumeSlider.value = volumeValue;
+        AudioListener.volume = volumeValue;
     }
 }

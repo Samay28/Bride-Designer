@@ -12,8 +12,10 @@ public class MainMenuManager : MonoBehaviour
     public TextMeshProUGUI Success;
     public GameObject MainPanel;
     public GameObject SettingsPanel;
+    int count = 0;
     void Start()
     {   
+        count = PlayerPrefs.GetInt("Count", 0);
         PauseManager.IsPaused = false;
         if (PlayerPrefs.HasKey("highscore"))
         {
@@ -54,22 +56,46 @@ public class MainMenuManager : MonoBehaviour
     }
     public void StartGame()
     {
-        SceneManager.LoadScene(1);
+        if (FirsTimeLoaded())
+        {
+            SceneManager.LoadScene(4);
+        }
+        else
+        {
+            SceneManager.LoadScene(1);
+        }
     }
     public void Exit()
     {
         Application.Quit();
     }
     public void OpenSettings()
-    {   
+    {
         PauseManager.IsPaused = true;
         SettingsPanel.SetActive(true);
         MainPanel.SetActive(false);
     }
     public void BackMain()
-    {   
+    {
         PauseManager.IsPaused = false;
         SettingsPanel.SetActive(false);
         MainPanel.SetActive(true);
     }
+    public bool FirsTimeLoaded()
+{
+        count = PlayerPrefs.GetInt("Count");
+        if (count == 0)
+        {
+            count++;
+            PlayerPrefs.SetInt("Count", count);
+            return true;
+        }
+        else
+        {   
+            Debug.Log("fail2");
+            return false;
+        }
+    }
 }
+
+
