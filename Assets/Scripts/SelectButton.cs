@@ -5,8 +5,8 @@ using UnityEngine.Playables;
 using UnityEngine.SceneManagement;
 public class SelectButton : MonoBehaviour
 {
-    public static bool Hairturn = true;
-    public static bool OutfitTurn = false;
+    public static bool Hairturn = false;
+    public static bool OutfitTurn = true;
     public static bool JewelTurn = false;
     public static bool EyeTurn = false;
     public static bool EyebrowsTurn = false;
@@ -16,6 +16,7 @@ public class SelectButton : MonoBehaviour
 
     public static bool LMehndiTurn = false;
     public static bool HMehndiTurn = false;
+    public static bool ZoomNow;
     public GameObject DesignPanel;
     public GameObject DesignSelect;
     public GameObject MakeupPanel;
@@ -24,14 +25,20 @@ public class SelectButton : MonoBehaviour
 
     public GameObject Subdiv;
     public PlayableDirector Anim1;
+    public GameObject PauseButton;
 
     void Awake()
     {
-        Hairturn = true;
-        OutfitTurn = false;
+        Hairturn = false;
+        OutfitTurn = true;
         DesignPanel.SetActive(true);
         MakeupPanel.SetActive(false);
-        Subdiv.SetActive(false);
+        Subdiv.SetActive(true);
+    }
+    void Start()
+    {
+        ZoomNow = false;
+        PauseButton.SetActive(true);
     }
 
     // Update is called once per frame
@@ -45,15 +52,23 @@ public class SelectButton : MonoBehaviour
         OutfitTurn = false;
         Subdiv.SetActive(false);
         JewelTurn = false;
-
+        PlayerController.instance.SetPos1();
     }
     public void OutfitButton()
     {
         OutfitTurn = true;
         Hairturn = false;
         Subdiv.SetActive(true);
-
         JewelTurn = false;
+        PlayerController.instance.SetInPos();
+    }
+    public void JewelButton()
+    {
+        OutfitTurn = false;
+        Hairturn = false;
+        JewelTurn = true;
+        Subdiv.SetActive(false);
+        PlayerController.instance.SetPos1();
     }
 
     public void NextButton()
@@ -64,13 +79,7 @@ public class SelectButton : MonoBehaviour
         Hairturn = false;
         EyeTurn = true;
         JewelTurn = false;
-    }
-    public void JewelButton()
-    {
-        OutfitTurn = false;
-        Hairturn = false;
-        JewelTurn = true;
-        Subdiv.SetActive(false);
+        PlayerController.instance.SetPos();
     }
     public void EyeButton()
     {
@@ -121,6 +130,8 @@ public class SelectButton : MonoBehaviour
         cheeksturn = false;
         MakeupPanel.SetActive(false);
         Anim1.Play();
+        PlayerController.instance.SetInPos();
+        PauseButton.SetActive(false);
     }
     public void NewLevel()
     {
@@ -142,6 +153,7 @@ public class SelectButton : MonoBehaviour
         JewelTurn = false;
         DesignSelect.SetActive(false);
         MehndiSelect.SetActive(true);
+        PlayerController.instance.SetInPos();
     }
     public void MehndiPanelOver()
     {
@@ -152,6 +164,7 @@ public class SelectButton : MonoBehaviour
         EyeTurn = true;
         DesignSelect.SetActive(true);
         MehndiSelect.SetActive(false);
+        PlayerController.instance.SetPos();
     }
     public void HandsTurn()
     {

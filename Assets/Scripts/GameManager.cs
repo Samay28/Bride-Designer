@@ -26,6 +26,9 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI ResultTxt;
     public GameObject ButtonNewLevel;
     public GameObject ButtonNewLevel2;
+    public GameObject ButtonMenu1;
+     public GameObject ButtonMenu2;
+
     private void Awake()
     {
         if (instance == null)
@@ -165,10 +168,11 @@ public class GameManager : MonoBehaviour
         if (IsLevel1)
             if (Score >= 2)
             {
-                ResultTxt.text = "Level Cleared";
+                ResultTxt.text = "Groom Impressed";
                 ResultTxt.color = Color.green;
                 levelCleared1 = true;
-
+                ButtonNewLevel.SetActive(true);
+                ButtonMenu1.SetActive(false);
             }
             else
             {
@@ -178,14 +182,16 @@ public class GameManager : MonoBehaviour
                 WeddingsRuined++;
                 PlayerPrefs.SetInt("WeddingsRuined", WeddingsRuined);
                 Debug.Log("WeddingsRuined " + WeddingsRuined);
+                ButtonNewLevel.SetActive(false);
+                ButtonMenu1.SetActive(true);
             }
         else if (IsLevel2)
             if (Score2 >= 2.37)
             {
-                ResultTxt.text = "Level Cleared";
+                ResultTxt.text = "Groom Impressed";
                 ResultTxt.color = Color.green;
                 ButtonNewLevel2.SetActive(true);
-
+                ButtonMenu2.SetActive(false);
             }
             else
             {
@@ -195,6 +201,7 @@ public class GameManager : MonoBehaviour
                 PlayerPrefs.SetInt("WeddingsRuined", WeddingsRuined);
                 Debug.Log("WeddingsRuined " + WeddingsRuined);
                 ButtonNewLevel2.SetActive(false);
+                ButtonMenu2.SetActive(true);
             }
         else if (IsLevel3)
             if (MasterScore >= 2.6)

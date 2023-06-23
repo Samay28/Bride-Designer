@@ -22,10 +22,10 @@ public class CheeksSelect : MonoBehaviour
     private void Start()
     {
         foreach (Cheeks c in db.cheeks)
-        {          
-                if(!c.Nothing)
+        {
+            if (!c.Nothing)
                 c.value = Random.Range(3, 8);
-                else
+            else
                 c.value = Random.Range(1, 3);
         }
         updatecheeks(0);
@@ -38,46 +38,47 @@ public class CheeksSelect : MonoBehaviour
     }
     public void Swipe()
     {
-        if (SelectButton.cheeksturn)
-        {
-            if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+        if (!PauseManager.IsPaused)
+            if (SelectButton.cheeksturn)
             {
-                startTouchPos = Input.GetTouch(0).position;
-            }
-            if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved)
-            {
-                currentTouchPos = Input.GetTouch(0).position;
-                Vector2 Distance = currentTouchPos - startTouchPos;
-
-                if (!stopTouch)
+                if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
                 {
-                    if (Distance.x < -swipeRange)
+                    startTouchPos = Input.GetTouch(0).position;
+                }
+                if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved)
+                {
+                    currentTouchPos = Input.GetTouch(0).position;
+                    Vector2 Distance = currentTouchPos - startTouchPos;
+
+                    if (!stopTouch)
                     {
-                        if (selectedOption == 0)
-                            return;
-                        else
-                            selectedOption--;
-                        updatecheeks(selectedOption);
-                        stopTouch = true;
-                    }
-                    else if (Distance.x > swipeRange)
-                    {
-                        if (selectedOption == db.cheeks.Length - 1)
-                            return;
-                        else
-                            selectedOption++;
-                        updatecheeks(selectedOption);
-                        stopTouch = true;
+                        if (Distance.x < -swipeRange)
+                        {
+                            if (selectedOption == 0)
+                                return;
+                            else
+                                selectedOption--;
+                            updatecheeks(selectedOption);
+                            stopTouch = true;
+                        }
+                        else if (Distance.x > swipeRange)
+                        {
+                            if (selectedOption == db.cheeks.Length - 1)
+                                return;
+                            else
+                                selectedOption++;
+                            updatecheeks(selectedOption);
+                            stopTouch = true;
+                        }
                     }
                 }
+                if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Ended)
+                {
+                    stopTouch = false;
+                    endTouchPos = Input.GetTouch(0).position;
+                    Vector2 Distance = endTouchPos - startTouchPos;
+                }
             }
-            if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Ended)
-            {
-                stopTouch = false;
-                endTouchPos = Input.GetTouch(0).position;
-                Vector2 Distance = endTouchPos - startTouchPos;
-            }
-        }
     }
     private void Update()
     {
@@ -85,8 +86,7 @@ public class CheeksSelect : MonoBehaviour
 
     }
 
-    public void OnLockCheeks
-    ()
+    public void OnLockCheeks()
     {
         Cheeks cheeks = db.GetCheeks(selectedOption);
         selectedcheeksValue = cheeks.value;
