@@ -112,7 +112,7 @@ public class OutfitSelect : MonoBehaviour
             {
                 if (o.isTraditional)
                 {
-                    o.value = Random.Range(-5, 0);
+                    o.value = Random.Range(1, 3);
 
                 }
                 else if (o.isModern)

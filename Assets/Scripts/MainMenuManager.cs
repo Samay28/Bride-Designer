@@ -14,7 +14,7 @@ public class MainMenuManager : MonoBehaviour
     public GameObject SettingsPanel;
     int count = 0;
     void Start()
-    {
+    {   
         count = PlayerPrefs.GetInt("Count", 0);
         PauseManager.IsPaused = false;
         if (PlayerPrefs.HasKey("highscore"))
@@ -82,23 +82,19 @@ public class MainMenuManager : MonoBehaviour
         MainPanel.SetActive(true);
     }
     public bool FirsTimeLoaded()
-    {
-
+{
+        count = PlayerPrefs.GetInt("Count");
         if (count == 0)
         {
             count++;
-            PlayerPrefs.SetInt("Count", 1);
-            PlayerPrefs.Save();
-            Debug.Log("Hi");
+            PlayerPrefs.SetInt("Count", count);
             return true;
         }
-        else if (count != 0)
-        {
+        else
+        {   
             Debug.Log("fail2");
             return false;
         }
-    return false;
-
     }
 }
 
