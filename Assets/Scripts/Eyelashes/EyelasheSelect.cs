@@ -62,7 +62,7 @@ public class EyelasheSelect : MonoBehaviour
                     else if (Distance.x > swipeRange)
                     {
                         if (selectedOption == db.eyelashes.Length - 1)
-                            return;
+                           selectedOption=0;
                         else
                             selectedOption++;
                         updateeye(selectedOption);

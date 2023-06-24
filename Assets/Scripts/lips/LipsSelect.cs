@@ -73,7 +73,7 @@ public class LipsSelect : MonoBehaviour
                     else if (Distance.x > swipeRange)
                     {
                         if (selectedOption == db.lips.Length - 1)
-                            return;
+                            selectedOption=0;
                         else
                             selectedOption++;
                         updatelips(selectedOption);

@@ -62,7 +62,7 @@ public class EyesSelect : MonoBehaviour
                     else if (Distance.x > swipeRange)
                     {
                         if (selectedOption == db.eye.Length - 1)
-                            return;
+                            selectedOption=0;
                         else
                             selectedOption++;
                         updateeye(selectedOption);

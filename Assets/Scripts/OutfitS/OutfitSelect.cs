@@ -58,7 +58,7 @@ public class OutfitSelect : MonoBehaviour
                         else if (Distance.x > swipeRange)
                         {
                             if (selectedOption == db.outfits.Length - 1)
-                                return;
+                                selectedOption=0;
                             else
                                 selectedOption++;
                             updateOutfit(selectedOption);
@@ -112,7 +112,7 @@ public class OutfitSelect : MonoBehaviour
             {
                 if (o.isTraditional)
                 {
-                    o.value = Random.Range(1, 3);
+                    o.value = Random.Range(-5, 0);
 
                 }
                 else if (o.isModern)

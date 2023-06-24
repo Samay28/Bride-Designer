@@ -166,9 +166,9 @@ public class GameManager : MonoBehaviour
             stars[i].gameObject.SetActive(false);
         }
         if (IsLevel1)
-            if (Score >= 2)
+            if (Score >= 2.15)
             {
-                ResultTxt.text = "Level Cleared";
+                ResultTxt.text = "Groom Impressed";
                 ResultTxt.color = Color.green;
                 levelCleared1 = true;
                 ButtonNewLevel.SetActive(true);
@@ -186,9 +186,9 @@ public class GameManager : MonoBehaviour
                 ButtonMenu1.SetActive(true);
             }
         else if (IsLevel2)
-            if (Score2 >= 2.37)
+            if (Score2 >= 2.35)
             {
-                ResultTxt.text = "Level Cleared";
+                ResultTxt.text = "Groom Impressed";
                 ResultTxt.color = Color.green;
                 ButtonNewLevel2.SetActive(true);
                 ButtonMenu2.SetActive(false);
