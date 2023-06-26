@@ -37,16 +37,9 @@ public class PlayerController : MonoBehaviour
         if(!zoomed)
         {
         transform.position = new Vector2(transform.position.x, -1.7f);
-<<<<<<< HEAD
         cm.StartCamMove1();
-=======
-        cm.startCamMove1();
->>>>>>> 7fce7328804ead48413f3c0e61da45b02b15142d
         zoomed = true;
-        }
-        // else 
-        // {
-        //     transform.position = new Vector2(transform.position.x, -1.7f);
-        // }
+
     }
+}
 }

@@ -3,7 +3,6 @@ using UnityEngine.UI;
 
 public class ButtonManager : MonoBehaviour
 {
-<<<<<<< HEAD
     public Color selectedColor; 
     public Color defaultColor; 
 
@@ -11,7 +10,7 @@ public class ButtonManager : MonoBehaviour
 
     public Button[] exceptions;
 
-    private void Start()
+    private void Update()
     {
         
         Button[] buttons = FindObjectsOfType<Button>();
@@ -21,28 +20,12 @@ public class ButtonManager : MonoBehaviour
             if (ArrayContainsButton(exceptions, button))
                 continue;
 
-=======
-    public Color selectedColor; // The color for the selected button
-    public Color defaultColor; // The default color for buttons
-
-    private Button selectedButton; // The currently selected button
-
-    private void Update()
-    {
-        // Get all the buttons in your scene or hierarchy
-        Button[] buttons = FindObjectsOfType<Button>();
-
-        // Attach the OnButtonClick method to each button's click event
-        foreach (Button button in buttons)
-        {
->>>>>>> 7fce7328804ead48413f3c0e61da45b02b15142d
             button.onClick.AddListener(() => OnButtonClick(button));
         }
     }
 
     private void OnButtonClick(Button button)
     {
-<<<<<<< HEAD
         if (selectedButton != null)
         {
             
@@ -57,7 +40,7 @@ public class ButtonManager : MonoBehaviour
 
     private bool ArrayContainsButton(Button[] buttonArray, Button targetButton)
     {
-        // Check if the target button is present in the button array
+
         for (int i = 0; i < buttonArray.Length; i++)
         {
             if (buttonArray[i] == targetButton)
@@ -65,18 +48,4 @@ public class ButtonManager : MonoBehaviour
         }
         return false;
     }
-=======
-        // Check if a button was already selected
-        if (selectedButton != null)
-        {
-            // Reset the color of the previously selected button
-            selectedButton.image.color = defaultColor;
-        }
-
-        // Set the new button as the selected button
-        selectedButton = button;
-        // Change the color of the selected button
-        selectedButton.image.color = selectedColor;
-    }
->>>>>>> 7fce7328804ead48413f3c0e61da45b02b15142d
 }

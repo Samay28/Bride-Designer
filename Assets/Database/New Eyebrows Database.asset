@@ -13,9 +13,6 @@ MonoBehaviour:
   m_Name: New Eyebrows Database
   m_EditorClassIdentifier: 
   eyebrows:
-  - EyebrowLook: {fileID: 0}
-    value: 9
-    Nothing: 1
   - EyebrowLook: {fileID: 21300000, guid: 418d6fd71fbbd16428e963bd9ff1439d, type: 3}
     value: 7
     Nothing: 0

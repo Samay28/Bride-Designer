@@ -28,7 +28,6 @@ public class OutfitSelect : MonoBehaviour
         this.selectedOption = selectedOption;
         Outfit outfit = db.GetOutfit(selectedOption);
         SkinsUsed.sprite = outfit.OutfitLook;
-
     }
     public void Swipe()
     {
@@ -58,7 +57,7 @@ public class OutfitSelect : MonoBehaviour
                         else if (Distance.x > swipeRange)
                         {
                             if (selectedOption == db.outfits.Length - 1)
-                                selectedOption=0;
+                                selectedOption = 0;
                             else
                                 selectedOption++;
                             updateOutfit(selectedOption);
@@ -77,7 +76,6 @@ public class OutfitSelect : MonoBehaviour
     private void Update()
     {
         Swipe();
-
     }
     public void OnClickTradButton()
     {
@@ -108,6 +106,7 @@ public class OutfitSelect : MonoBehaviour
         Scene currentScene = SceneManager.GetActiveScene();
         foreach (Outfit o in db.outfits)
         {
+
             if (currentScene.name == "GameScene1")
             {
                 if (o.isTraditional)
@@ -167,5 +166,6 @@ public class OutfitSelect : MonoBehaviour
 
         }
     }
+   
 
 }

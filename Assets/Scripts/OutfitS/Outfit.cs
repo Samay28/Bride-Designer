@@ -11,6 +11,7 @@ public class Outfit
     public bool isCasual;
     public Sprite OutfitLook;
     public int value;
+    public GameObject Shoes;
 
  
 }
