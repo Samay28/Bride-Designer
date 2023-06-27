@@ -83,7 +83,7 @@ public class MainMenuManager : MonoBehaviour
 
     public bool FirstTimeLoaded()
     {
-        if (count <= 1)
+        if (count <= 2)
         {
             count++;
             PlayerPrefs.SetInt("Count", count);

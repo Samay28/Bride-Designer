@@ -221,6 +221,7 @@ public class GameManager : MonoBehaviour
                 PlayerPrefs.SetInt("WeddingsDone", WeddingsDone);
                 Debug.Log("WeddingsDone " + WeddingsDone);
                 Invoke("WinMusic", 2.5f);
+                Invoke("CloseMusicLastLevel", 2.5f);
             }
             else
             {
@@ -243,6 +244,10 @@ public class GameManager : MonoBehaviour
      public void FailMusic()
     {
         FailAudio.SetActive(true);
+        Music.SetActive(false);
+    }
+    public void CloseMusicLastLevel()
+    {
         Music.SetActive(false);
     }
 }
