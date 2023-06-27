@@ -17,11 +17,15 @@ public class OutfitSelect : MonoBehaviour
     bool stopTouch = false;
     public float swipeRange;
     public float tapRange;
+    public int lastIndex;
+    public int FirstIndex;
 
     private void Start()
     {
         updateOutfit(0);
         UpdateValuesOutfit();
+        lastIndex = db.outfits.Length;
+        FirstIndex = 0;
     }
     private void updateOutfit(int selectedOption)
     {
@@ -47,7 +51,7 @@ public class OutfitSelect : MonoBehaviour
                     {
                         if (Distance.x < -swipeRange)
                         {
-                            if (selectedOption == 0)
+                            if (selectedOption == FirstIndex)
                                 return;
                             else
                                 selectedOption--;
@@ -56,8 +60,8 @@ public class OutfitSelect : MonoBehaviour
                         }
                         else if (Distance.x > swipeRange)
                         {
-                            if (selectedOption == db.outfits.Length - 1)
-                                selectedOption = 0;
+                            if (selectedOption == lastIndex - 1)
+                                selectedOption = FirstIndex;
                             else
                                 selectedOption++;
                             updateOutfit(selectedOption);
@@ -81,16 +85,22 @@ public class OutfitSelect : MonoBehaviour
     {
         selectedOption = 0;
         updateOutfit(selectedOption);
+        lastIndex = 10;
+        FirstIndex = 0;
     }
     public void OnClickCasualButton()
     {
         selectedOption = 10;
         updateOutfit(selectedOption);
+        lastIndex = 20;
+        FirstIndex = 10;
     }
     public void OnClickModernButton()
     {
         selectedOption = 20;
         updateOutfit(selectedOption);
+        lastIndex = 30;
+        FirstIndex = 20;
     }
 
     public void OnLockOutfit()
@@ -166,6 +176,6 @@ public class OutfitSelect : MonoBehaviour
 
         }
     }
-   
+
 
 }

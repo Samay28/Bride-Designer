@@ -4731,9 +4731,6 @@ MonoBehaviour:
   defaultColor: {r: 1, g: 1, b: 1, a: 1}
   exceptions:
   - {fileID: 806120445}
-  - {fileID: 6626099}
-  - {fileID: 147484848}
-  - {fileID: 279715725}
   - {fileID: 449810607}
   - {fileID: 630467062}
 --- !u!1 &1133252741
