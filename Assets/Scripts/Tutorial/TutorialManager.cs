@@ -21,43 +21,63 @@ public class TutorialManager : MonoBehaviour
     // Update is called once per frame
    void Update()
 {
-    if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began && count == 0)
+   UpdateDialogue();
+}
+public void RightClick()
+{   
+    if(count<6)
+    count++;
+    
+}
+public void LeftClick()
+{
+    if(count!=0)
     {
-        Dialogue.text = "Well as it's your first time, I can guide you through the basics";
-        count++;
+        count--;
     }
-    else if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began && count == 1)
+}
+public void UpdateDialogue()
+{
+    if(count==0)
+    {
+         Dialogue.text = "Well as it's your first time, I can guide you through the basics";
+          Bride.SetActive(false);
+        Anims.SetActive(false);
+        Text.SetActive(false);
+    }
+    else if (count == 1)
     {
         Dialogue.text = "You will be personal designer of the girl, and you have to make sure that she is properly dressed for all the occasions!";
         Bride.SetActive(true);
-        count++;
+        Anims.SetActive(false);
+        Text.SetActive(false);
     }
-    else if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began && count == 2)
+    else if (count == 2)
     {
         Dialogue.text = "If you fail to make the groom happy, the girl might get rejected at any phase of the wedding.";
         Bride.SetActive(false);
         Text.SetActive(true);
-        count++;
+        Anims.SetActive(false);
     }
-    else if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began && count == 3)
+    else if (count == 3)
     {
         Dialogue.text = "Swipe to change the designs, select the outfits, and other accessories according to the event.";
         Text.SetActive(false);
         Anims.SetActive(true);
-        count++;
+        Bride.SetActive(false);
     }
-    else if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began && count == 4)
+    else if (count == 4)
     {
         Dialogue.text = "Good luck! I will see you next time!";
         Anims.SetActive(false);
-        count++;
+        Text.SetActive(false);
+        Bride.SetActive(false);
     }
-    else if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began && count == 5)
+    else if (count == 5)
     {
-        Dialogue.text = "Oh, by the way, myself Sherry. Nice to meet you!";
-        count++;
+        Dialogue.text = "Oh, by the way, I'm Sherry. Nice to meet you!";
     }
-    else if(Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began && count == 6)
+    else if(count==6)
     {
         SceneManager.LoadScene(1);
     }

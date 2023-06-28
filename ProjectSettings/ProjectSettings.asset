@@ -250,8 +250,8 @@ PlayerSettings:
   AndroidTargetDevices: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: 
-  AndroidKeyaliasName: 
+  AndroidKeystoreName: '{dedicated}: Documents/BrideDesignKey.keystore'
+  AndroidKeyaliasName: bridedesin
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 0
   AndroidIsGame: 1

@@ -16,7 +16,9 @@ public class SceneLoad : MonoBehaviour
 
     private IEnumerator LoadSceneAsync()
     {
-        if (!mm.FirsTimeLoaded())
+
+        if (!mm.FirstTimeLoaded())
+
         {
             // Load the scene asynchronously
             loadingOperation = SceneManager.LoadSceneAsync(sceneName);

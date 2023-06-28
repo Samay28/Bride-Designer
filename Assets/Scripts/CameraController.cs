@@ -9,23 +9,19 @@ public class CameraController : MonoBehaviour
     public float endZ1 = -3f;
 
     private float elapsedTime = 0f;
-    private float elapsedTime2 = 0f;
+    private float targetZ = 0f;
     private bool isMoving = false;
-    private bool IsMoving2 = false;
-    private bool IsRetracting = false;
 
-    private void Start()
-    {   
-        
-    }
+    private void FixedUpdate()
+    {
 
-    private void Update()
-    {   
         if (isMoving)
         {
             // Update the camera's Z position based on the interpolation
             float t = elapsedTime / duration;
-            float zPosition = Mathf.Lerp(startZ, endZ, t);
+
+            float zPosition = Mathf.Lerp(transform.position.z, targetZ, t);
+
             transform.position = new Vector3(transform.position.x, transform.position.y, zPosition);
 
             elapsedTime += Time.deltaTime;
@@ -36,54 +32,28 @@ public class CameraController : MonoBehaviour
                 isMoving = false;
             }
         }
-        if (IsMoving2)
-        {
-            // Update the camera's Z position based on the interpolation
-            float t = elapsedTime / duration;
-            float zPosition = Mathf.Lerp(startZ, endZ1, t);
-            transform.position = new Vector3(transform.position.x, transform.position.y, zPosition);
 
-            elapsedTime += Time.deltaTime;
-
-            if (elapsedTime >= duration)
-            {
-                // End the movement
-                IsMoving2 = false;
-            }
-        }
-        if (IsRetracting)
-        {
-            // Update the camera's Z position based on the interpolation
-            float t = elapsedTime2 / duration;
-            float zPosition = Mathf.Lerp(transform.position.z, startZ, t);
-            transform.position = new Vector3(transform.position.x, transform.position.y, zPosition);
-
-            elapsedTime2 += Time.deltaTime;
-
-            if (elapsedTime2 >= duration)
-            {
-                // End the movement
-                IsRetracting = false;
-            }
-        }
     }
 
     public void StartCameraMovement()
-    {   
+    {
+        targetZ = endZ;
         elapsedTime = 0f;
         isMoving = true;
     }
-    public void startCamMove1()
-    {   
-        if(!IsRetracting)
-        elapsedTime = 0;
-        IsMoving2 = true;
+
+    public void StartCamMove1()
+    {
+        targetZ = endZ1;
+        elapsedTime = 0f;
+        isMoving = true;
     }
+
     public void Retract()
-    {   
-        if(!IsMoving2)
-        elapsedTime = 0;
-        elapsedTime2 = 0;
-        IsRetracting = true;
+    {
+        targetZ = startZ;
+        elapsedTime = 0f;
+        isMoving = true;
+
     }
 }

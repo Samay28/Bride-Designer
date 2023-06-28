@@ -55,7 +55,7 @@ public class CheeksSelect : MonoBehaviour
                         if (Distance.x < -swipeRange)
                         {
                             if (selectedOption == 0)
-                                return;
+                                selectedOption = db.cheeks.Length - 1;
                             else
                                 selectedOption--;
                             updatecheeks(selectedOption);
@@ -64,7 +64,7 @@ public class CheeksSelect : MonoBehaviour
                         else if (Distance.x > swipeRange)
                         {
                             if (selectedOption == db.cheeks.Length - 1)
-                                return;
+                                selectedOption=0;
                             else
                                 selectedOption++;
                             updatecheeks(selectedOption);

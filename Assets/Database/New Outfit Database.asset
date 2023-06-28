@@ -16,150 +16,162 @@ MonoBehaviour:
   - isTraditional: 1
     isModern: 0
     isCasual: 0
-    OutfitLook: {fileID: 21300000, guid: bcf90ddbd08dedf47b691feb44506231, type: 3}
-    value: 0
+    OutfitLook: {fileID: 21300000, guid: b9905e8dc61f38c45a33322bae1d5e22, type: 3}
+    value: -1
+    Shoes: {fileID: 0}
   - isTraditional: 1
     isModern: 0
     isCasual: 0
     OutfitLook: {fileID: 21300000, guid: 48930b4793f013e438669c470932e559, type: 3}
-    value: 0
+    value: -5
+    Shoes: {fileID: 0}
   - isTraditional: 1
     isModern: 0
     isCasual: 0
     OutfitLook: {fileID: 21300000, guid: 61cd9053eda2b714288fa5e4bb4afa62, type: 3}
-    value: 0
+    value: -1
+    Shoes: {fileID: 0}
   - isTraditional: 1
     isModern: 0
     isCasual: 0
     OutfitLook: {fileID: 21300000, guid: 382cd5d2c87070345920eb2715d7b19d, type: 3}
-    value: 0
+    value: -3
+    Shoes: {fileID: 0}
   - isTraditional: 1
     isModern: 0
     isCasual: 0
     OutfitLook: {fileID: 21300000, guid: c17e5052d71853448a3f62d2d18fedff, type: 3}
-    value: 0
+    value: -2
+    Shoes: {fileID: 0}
   - isTraditional: 1
     isModern: 0
     isCasual: 0
     OutfitLook: {fileID: 21300000, guid: 465e59c2f65f36f4c9254f8152011db6, type: 3}
-    value: 0
+    value: -2
+    Shoes: {fileID: 0}
   - isTraditional: 1
     isModern: 0
     isCasual: 0
     OutfitLook: {fileID: 21300000, guid: f8c4d57b16e286545baac092600e2bb6, type: 3}
-    value: 0
+    value: -5
+    Shoes: {fileID: 0}
   - isTraditional: 1
     isModern: 0
     isCasual: 0
     OutfitLook: {fileID: 21300000, guid: 600b318316299a04e98f46c451d5e0a8, type: 3}
-    value: 0
+    value: -2
+    Shoes: {fileID: 0}
   - isTraditional: 1
     isModern: 0
     isCasual: 0
     OutfitLook: {fileID: 21300000, guid: 4c6ade8ed45bb8c4db67ed45416c8650, type: 3}
-    value: 0
+    value: -1
+    Shoes: {fileID: 0}
   - isTraditional: 1
     isModern: 0
     isCasual: 0
     OutfitLook: {fileID: 21300000, guid: e765c37e010ee0146bf18245a839889b, type: 3}
-    value: 0
+    value: -4
+    Shoes: {fileID: 0}
   - isTraditional: 0
     isModern: 0
     isCasual: 1
     OutfitLook: {fileID: 21300000, guid: 3104228c38ff82f479f50bb90643c0b4, type: 3}
-    value: 0
+    value: 8
+    Shoes: {fileID: 4679592507925155138, guid: 4883a38c26488f346875b144b18d1b3e, type: 3}
   - isTraditional: 0
     isModern: 0
     isCasual: 1
     OutfitLook: {fileID: 21300000, guid: 5267efd1d293e234a93eb35159c9c23d, type: 3}
-    value: 0
+    value: 7
+    Shoes: {fileID: 0}
   - isTraditional: 0
     isModern: 0
     isCasual: 1
     OutfitLook: {fileID: 21300000, guid: 9bc8c1531ba482a4abfa3fb19de9b41b, type: 3}
-    value: 0
-  - isTraditional: 0
-    isModern: 0
-    isCasual: 1
-    OutfitLook: {fileID: 21300000, guid: c262f0c569963ec42bbb88b0a422b705, type: 3}
-    value: 0
-  - isTraditional: 0
-    isModern: 0
-    isCasual: 1
-    OutfitLook: {fileID: 21300000, guid: eebdfa160c5b71a4f91bf8388e409874, type: 3}
-    value: 0
-  - isTraditional: 0
-    isModern: 0
-    isCasual: 1
-    OutfitLook: {fileID: 21300000, guid: 2c3c527383dec9440a36c573c6cb39ca, type: 3}
-    value: 0
+    value: 9
+    Shoes: {fileID: 0}
   - isTraditional: 0
     isModern: 0
     isCasual: 1
     OutfitLook: {fileID: 21300000, guid: ac879590e9e65cf4882064e457075640, type: 3}
-    value: 0
+    value: 8
+    Shoes: {fileID: 0}
   - isTraditional: 0
     isModern: 0
     isCasual: 1
     OutfitLook: {fileID: 21300000, guid: 16ff3dd473f208f46ba47927a5e37657, type: 3}
-    value: 0
+    value: 8
+    Shoes: {fileID: 0}
   - isTraditional: 0
     isModern: 0
     isCasual: 1
     OutfitLook: {fileID: 21300000, guid: c4273943860ffaf4d8caed4e334ae45d, type: 3}
-    value: 0
+    value: 8
+    Shoes: {fileID: 0}
   - isTraditional: 0
     isModern: 0
     isCasual: 1
     OutfitLook: {fileID: 21300000, guid: 8b8d20dd9677c674d9b95ad7da47d138, type: 3}
-    value: 0
+    value: 7
+    Shoes: {fileID: 0}
   - isTraditional: 0
     isModern: 1
     isCasual: 0
     OutfitLook: {fileID: 21300000, guid: d9b7f7bbb80145d47bc0502b293578dd, type: 3}
-    value: 0
+    value: 4
+    Shoes: {fileID: 0}
   - isTraditional: 0
     isModern: 1
     isCasual: 0
     OutfitLook: {fileID: 21300000, guid: 7e956248df52223469686444cdf17b68, type: 3}
-    value: 0
+    value: 5
+    Shoes: {fileID: 0}
   - isTraditional: 0
     isModern: 1
     isCasual: 0
     OutfitLook: {fileID: 21300000, guid: 47cd20e2b8112a947bd6985c8cc3f6d6, type: 3}
-    value: 0
+    value: 4
+    Shoes: {fileID: 0}
   - isTraditional: 0
     isModern: 1
     isCasual: 0
     OutfitLook: {fileID: 21300000, guid: 5a2dd8e21603bb047985d99622659620, type: 3}
-    value: 0
+    value: 4
+    Shoes: {fileID: 0}
   - isTraditional: 0
     isModern: 1
     isCasual: 0
     OutfitLook: {fileID: 21300000, guid: f7b06eeab5a371e4596d2de4e8e32f92, type: 3}
-    value: 0
+    value: 5
+    Shoes: {fileID: 0}
   - isTraditional: 0
     isModern: 1
     isCasual: 0
     OutfitLook: {fileID: 21300000, guid: be6f59827115ac24683c39c7f14d118b, type: 3}
-    value: 0
+    value: 5
+    Shoes: {fileID: 0}
   - isTraditional: 0
     isModern: 1
     isCasual: 0
     OutfitLook: {fileID: 21300000, guid: 022e8e996f928cc4196f7cb962deab53, type: 3}
-    value: 0
+    value: 4
+    Shoes: {fileID: 0}
   - isTraditional: 0
     isModern: 1
     isCasual: 0
     OutfitLook: {fileID: 21300000, guid: 417742a3be0765b4ab1ee219081f4487, type: 3}
-    value: 0
+    value: 4
+    Shoes: {fileID: 0}
   - isTraditional: 0
     isModern: 1
     isCasual: 0
     OutfitLook: {fileID: 21300000, guid: b5fad7681e6ed644aab1114a023b006f, type: 3}
-    value: 0
+    value: 4
+    Shoes: {fileID: 0}
   - isTraditional: 0
     isModern: 1
     isCasual: 0
     OutfitLook: {fileID: 21300000, guid: 5b1a80c8e42c45040924f6430c051c06, type: 3}
-    value: 0
+    value: 4
+    Shoes: {fileID: 0}

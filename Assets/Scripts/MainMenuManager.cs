@@ -13,10 +13,12 @@ public class MainMenuManager : MonoBehaviour
     public GameObject MainPanel;
     public GameObject SettingsPanel;
     int count = 0;
+
     void Start()
-    {   
+    {
         count = PlayerPrefs.GetInt("Count", 0);
         PauseManager.IsPaused = false;
+        
         if (PlayerPrefs.HasKey("highscore"))
         {
             GameManager.instance.highscore = PlayerPrefs.GetFloat("highscore");
@@ -46,17 +48,11 @@ public class MainMenuManager : MonoBehaviour
         {
             Rejections.text = "Rejections: " + 0;
         }
-
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
     public void StartGame()
     {
-        if (FirsTimeLoaded())
+        if (FirstTimeLoaded())
         {
             SceneManager.LoadScene(4);
         }
@@ -65,37 +61,40 @@ public class MainMenuManager : MonoBehaviour
             SceneManager.LoadScene(1);
         }
     }
+
     public void Exit()
     {
         Application.Quit();
     }
+
     public void OpenSettings()
     {
         PauseManager.IsPaused = true;
         SettingsPanel.SetActive(true);
         MainPanel.SetActive(false);
     }
+
     public void BackMain()
     {
         PauseManager.IsPaused = false;
         SettingsPanel.SetActive(false);
         MainPanel.SetActive(true);
     }
-    public bool FirsTimeLoaded()
-{
-        count = PlayerPrefs.GetInt("Count");
-        if (count == 0)
+
+    public bool FirstTimeLoaded()
+    {
+        if (count <= 2)
         {
             count++;
             PlayerPrefs.SetInt("Count", count);
+            PlayerPrefs.Save();
+            Debug.Log("First time loaded");
             return true;
         }
         else
-        {   
-            Debug.Log("fail2");
+        {
+            Debug.Log("Not the first time loaded");
             return false;
         }
     }
 }
-
-

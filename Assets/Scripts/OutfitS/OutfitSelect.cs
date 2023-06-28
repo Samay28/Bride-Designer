@@ -17,18 +17,21 @@ public class OutfitSelect : MonoBehaviour
     bool stopTouch = false;
     public float swipeRange;
     public float tapRange;
+    public int lastIndex;
+    public int FirstIndex;
 
     private void Start()
     {
         updateOutfit(0);
         UpdateValuesOutfit();
+        lastIndex = db.outfits.Length;
+        FirstIndex = 0;
     }
     private void updateOutfit(int selectedOption)
     {
         this.selectedOption = selectedOption;
         Outfit outfit = db.GetOutfit(selectedOption);
         SkinsUsed.sprite = outfit.OutfitLook;
-
     }
     public void Swipe()
     {
@@ -48,8 +51,8 @@ public class OutfitSelect : MonoBehaviour
                     {
                         if (Distance.x < -swipeRange)
                         {
-                            if (selectedOption == 0)
-                                return;
+                            if (selectedOption == FirstIndex)
+                                selectedOption = lastIndex-1;
                             else
                                 selectedOption--;
                             updateOutfit(selectedOption);
@@ -57,8 +60,8 @@ public class OutfitSelect : MonoBehaviour
                         }
                         else if (Distance.x > swipeRange)
                         {
-                            if (selectedOption == db.outfits.Length - 1)
-                                return;
+                            if (selectedOption == lastIndex - 1)
+                                selectedOption = FirstIndex;
                             else
                                 selectedOption++;
                             updateOutfit(selectedOption);
@@ -77,22 +80,35 @@ public class OutfitSelect : MonoBehaviour
     private void Update()
     {
         Swipe();
-
     }
     public void OnClickTradButton()
-    {
+    {   
+        SelectButton.OutfitTurn = true;
         selectedOption = 0;
         updateOutfit(selectedOption);
+        lastIndex = 10;
+        FirstIndex = 0;
     }
     public void OnClickCasualButton()
-    {
+    {   
+        SelectButton.OutfitTurn = true;
         selectedOption = 10;
         updateOutfit(selectedOption);
+        lastIndex = 20;
+        FirstIndex = 10;
     }
     public void OnClickModernButton()
-    {
+    {   
+        SelectButton.OutfitTurn = true;
         selectedOption = 20;
         updateOutfit(selectedOption);
+        lastIndex = 30;
+        FirstIndex = 20;
+    }
+    public void OnClickOutfit()
+    {
+        lastIndex = 30;
+        FirstIndex = 0;
     }
 
     public void OnLockOutfit()
@@ -108,11 +124,12 @@ public class OutfitSelect : MonoBehaviour
         Scene currentScene = SceneManager.GetActiveScene();
         foreach (Outfit o in db.outfits)
         {
+
             if (currentScene.name == "GameScene1")
             {
                 if (o.isTraditional)
                 {
-                    o.value = Random.Range(1, 3);
+                    o.value = Random.Range(-5, 0);
 
                 }
                 else if (o.isModern)
@@ -167,5 +184,6 @@ public class OutfitSelect : MonoBehaviour
 
         }
     }
+
 
 }

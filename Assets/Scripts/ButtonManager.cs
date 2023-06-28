@@ -3,35 +3,54 @@ using UnityEngine.UI;
 
 public class ButtonManager : MonoBehaviour
 {
-    public Color selectedColor; // The color for the selected button
-    public Color defaultColor; // The default color for buttons
+    public Color selectedColor;
+    public Color defaultColor;
 
-    private Button selectedButton; // The currently selected button
+    private Button selectedButton;
 
+    public Button[] exceptions;
+
+
+    void Start()
+    {
+        
+       
+    }
     private void Update()
     {
-        // Get all the buttons in your scene or hierarchy
-        Button[] buttons = FindObjectsOfType<Button>();
 
-        // Attach the OnButtonClick method to each button's click event
+        Button[] buttons = FindObjectsOfType<Button>();
         foreach (Button button in buttons)
         {
+
+            if (ArrayContainsButton(exceptions, button))
+                continue;
+
             button.onClick.AddListener(() => OnButtonClick(button));
         }
     }
 
     private void OnButtonClick(Button button)
     {
-        // Check if a button was already selected
         if (selectedButton != null)
         {
-            // Reset the color of the previously selected button
-            selectedButton.image.color = defaultColor;
-        }
 
-        // Set the new button as the selected button
+            if (!ArrayContainsButton(exceptions, selectedButton))
+                selectedButton.image.color = defaultColor;
+                
+        }
         selectedButton = button;
-        // Change the color of the selected button
         selectedButton.image.color = selectedColor;
+    }
+
+    private bool ArrayContainsButton(Button[] buttonArray, Button targetButton)
+    {
+
+        for (int i = 0; i < buttonArray.Length; i++)
+        {
+            if (buttonArray[i] == targetButton)
+                return true;
+        }
+        return false;
     }
 }

@@ -28,6 +28,9 @@ public class GameManager : MonoBehaviour
     public GameObject ButtonNewLevel2;
     public GameObject ButtonMenu1;
      public GameObject ButtonMenu2;
+     public GameObject PassAudio;
+      public GameObject FailAudio;
+      public GameObject Music;
 
     private void Awake()
     {
@@ -66,6 +69,8 @@ public class GameManager : MonoBehaviour
         highscore = PlayerPrefs.GetFloat("highscore", 0);
         WeddingsDone = PlayerPrefs.GetInt("WeddingsDone", 0);
         WeddingsRuined = PlayerPrefs.GetInt("WeddingsRuined ", 0);
+        PassAudio.SetActive(false);
+        FailAudio.SetActive(false);
     }
 
     // Update is called once per frame
@@ -166,13 +171,14 @@ public class GameManager : MonoBehaviour
             stars[i].gameObject.SetActive(false);
         }
         if (IsLevel1)
-            if (Score >= 2)
+            if (Score >= 2.15)
             {
                 ResultTxt.text = "Groom Impressed";
                 ResultTxt.color = Color.green;
                 levelCleared1 = true;
                 ButtonNewLevel.SetActive(true);
                 ButtonMenu1.SetActive(false);
+                Invoke("WinMusic", 2.5f);
             }
             else
             {
@@ -184,14 +190,16 @@ public class GameManager : MonoBehaviour
                 Debug.Log("WeddingsRuined " + WeddingsRuined);
                 ButtonNewLevel.SetActive(false);
                 ButtonMenu1.SetActive(true);
+                Invoke("FailMusic", 2.5f);
             }
         else if (IsLevel2)
-            if (Score2 >= 2.37)
+            if (Score2 >= 2.35)
             {
                 ResultTxt.text = "Groom Impressed";
                 ResultTxt.color = Color.green;
                 ButtonNewLevel2.SetActive(true);
                 ButtonMenu2.SetActive(false);
+                Invoke("WinMusic", 2.5f);
             }
             else
             {
@@ -202,15 +210,18 @@ public class GameManager : MonoBehaviour
                 Debug.Log("WeddingsRuined " + WeddingsRuined);
                 ButtonNewLevel2.SetActive(false);
                 ButtonMenu2.SetActive(true);
+                Invoke("FailMusic", 2.5f);
             }
         else if (IsLevel3)
             if (MasterScore >= 2.6)
             {
-                ResultTxt.text = "Wedding Successful!";
+                ResultTxt.text = "Wedding Successfull!";
                 ResultTxt.color = Color.green;
                 WeddingsDone++;
                 PlayerPrefs.SetInt("WeddingsDone", WeddingsDone);
                 Debug.Log("WeddingsDone " + WeddingsDone);
+                Invoke("WinMusic", 2.5f);
+                Invoke("CloseMusicLastLevel", 2.5f);
             }
             else
             {
@@ -219,11 +230,24 @@ public class GameManager : MonoBehaviour
                 WeddingsRuined++;
                 PlayerPrefs.SetInt("WeddingsRuined", WeddingsRuined);
                 Debug.Log("WeddingsRuined " + WeddingsRuined);
+                Invoke("FailMusic", 2.5f);
             }
     }
     public void ReturnMenu()
     {
         SceneManager.LoadScene(0);
     }
-
+    public void WinMusic()
+    {
+        PassAudio.SetActive(true);
+    }
+     public void FailMusic()
+    {
+        FailAudio.SetActive(true);
+        Music.SetActive(false);
+    }
+    public void CloseMusicLastLevel()
+    {
+        Music.SetActive(false);
+    }
 }
