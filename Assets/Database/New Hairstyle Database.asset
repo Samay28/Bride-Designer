@@ -13,47 +13,25 @@ MonoBehaviour:
   m_Name: New Hairstyle Database
   m_EditorClassIdentifier: 
   Hairstyles:
-  - isTraditional: 0
-    isModern: 0
-    isCasual: 0
-    HairstyleLook: {fileID: 21300000, guid: 9caccf517e6479e4cbd3cb25fd758526, type: 3}
-  - isTraditional: 0
-    isModern: 0
-    isCasual: 0
-    HairstyleLook: {fileID: 21300000, guid: f76596b62a2647e4b94fa84de5c8f3d5, type: 3}
-  - isTraditional: 0
-    isModern: 0
-    isCasual: 0
-    HairstyleLook: {fileID: 21300000, guid: cc2e084fa1c6a6c4e961609ca0150950, type: 3}
-  - isTraditional: 0
-    isModern: 0
-    isCasual: 0
-    HairstyleLook: {fileID: 21300000, guid: 926ed1c7b8d84114eb010aa5ca73147a, type: 3}
-  - isTraditional: 0
-    isModern: 0
-    isCasual: 0
-    HairstyleLook: {fileID: 21300000, guid: ffa399efc5518664d89f7365a3ba6186, type: 3}
-  - isTraditional: 0
-    isModern: 0
-    isCasual: 0
-    HairstyleLook: {fileID: 21300000, guid: afeaa9231bc15044891305a58964044b, type: 3}
-  - isTraditional: 0
-    isModern: 0
-    isCasual: 0
-    HairstyleLook: {fileID: 21300000, guid: a56bd0a150eff224cb0998952e01d765, type: 3}
-  - isTraditional: 0
-    isModern: 0
-    isCasual: 0
-    HairstyleLook: {fileID: 21300000, guid: 30a25294cafdf814387b950a0f90124a, type: 3}
-  - isTraditional: 0
-    isModern: 0
-    isCasual: 0
-    HairstyleLook: {fileID: 21300000, guid: b09b22551d29a594f8a60629d386919a, type: 3}
-  - isTraditional: 0
-    isModern: 0
-    isCasual: 0
-    HairstyleLook: {fileID: 21300000, guid: 9a40dfb93319ed741be535bcce72096b, type: 3}
-  - isTraditional: 0
-    isModern: 0
-    isCasual: 0
-    HairstyleLook: {fileID: 21300000, guid: ef45e65f904b3a94d8870fcb62431090, type: 3}
+  - HairstyleLook: {fileID: 21300000, guid: 6d4e91018e2d34648b21b311c283582a, type: 3}
+    value: 5
+  - HairstyleLook: {fileID: 21300000, guid: bdae86c9e42c8244fb88ddb78f37c2ce, type: 3}
+    value: 7
+  - HairstyleLook: {fileID: 21300000, guid: 0315f34d51c65a942b92b026b35bf4f8, type: 3}
+    value: 9
+  - HairstyleLook: {fileID: 21300000, guid: 99c6ef93f33a5eb4a915de60f27b8b0c, type: 3}
+    value: 4
+  - HairstyleLook: {fileID: 21300000, guid: ab7bd5cadf3f1ec46bdd38ed0977a5a0, type: 3}
+    value: 9
+  - HairstyleLook: {fileID: 21300000, guid: 8f0f29aa125eaf741b1faaa23a626abd, type: 3}
+    value: 4
+  - HairstyleLook: {fileID: 21300000, guid: 03a84fc000046fd489aaceb0b7646085, type: 3}
+    value: 6
+  - HairstyleLook: {fileID: 21300000, guid: bdbb5e9d2a0d50840b46abefb024fdf1, type: 3}
+    value: 3
+  - HairstyleLook: {fileID: 21300000, guid: b434022e086c1f04aacd10e6096e5702, type: 3}
+    value: 8
+  - HairstyleLook: {fileID: 21300000, guid: d1a414e8771a2bc4c8157cef29102f50, type: 3}
+    value: 4
+  - HairstyleLook: {fileID: 21300000, guid: 5c9e00e6ef422a84cb3864660d39c2ba, type: 3}
+    value: 6

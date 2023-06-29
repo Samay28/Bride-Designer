@@ -27,8 +27,7 @@ public class PlayerController : MonoBehaviour
         transform.position = new Vector2(transform.position.x, -1.64f);
         cm.StartCameraMovement();
         zoomed = true;
-        Neck.SetActive(true);
-        Outfit.SetActive(false);
+        Invoke("NeckActive", 0.5f);
     }
     public void SetInPos()
     {   
@@ -46,9 +45,15 @@ public class PlayerController : MonoBehaviour
         transform.position = new Vector2(transform.position.x, -2.1f);
         cm.StartCamMove1();
         zoomed = true;
+        Invoke("NeckActive", 0.5f);
+        }
+    }
+    public void NeckActive()
+    {
         Neck.SetActive(true);
         Outfit.SetActive(false);
     }
+   
     
-}
+
 }

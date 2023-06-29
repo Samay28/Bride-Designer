@@ -3,16 +3,22 @@ using UnityEngine.UI;
 
 public class ButtonManager : MonoBehaviour
 {
-    public Color selectedColor; 
-    public Color defaultColor; 
+    public Color selectedColor;
+    public Color defaultColor;
 
-    private Button selectedButton; 
+    private Button selectedButton;
 
     public Button[] exceptions;
 
-    private void Update()
+
+    void Start()
     {
         
+       
+    }
+    private void Update()
+    {
+
         Button[] buttons = FindObjectsOfType<Button>();
         foreach (Button button in buttons)
         {
@@ -28,12 +34,11 @@ public class ButtonManager : MonoBehaviour
     {
         if (selectedButton != null)
         {
-            
+
             if (!ArrayContainsButton(exceptions, selectedButton))
                 selectedButton.image.color = defaultColor;
+                
         }
-
-        
         selectedButton = button;
         selectedButton.image.color = selectedColor;
     }

@@ -72,7 +72,7 @@ public class JewelSelect : MonoBehaviour
                     if (Distance.x < -swipeRange)
                     {
                         if (selectedOption == 0)
-                            return;
+                            selectedOption = db.Jewelleries.Length - 1;
                         else
                             selectedOption--;
                         updateJewel(selectedOption);

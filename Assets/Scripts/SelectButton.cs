@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class SelectButton : MonoBehaviour
 {
     public static bool Hairturn = false;
-    public static bool OutfitTurn = true;
+    public static bool OutfitTurn = false;
     public static bool JewelTurn = false;
     public static bool EyeTurn = false;
     public static bool EyebrowsTurn = false;
@@ -30,7 +30,7 @@ public class SelectButton : MonoBehaviour
     void Awake()
     {
         Hairturn = false;
-        OutfitTurn = true;
+        OutfitTurn = false;
         DesignPanel.SetActive(true);
         MakeupPanel.SetActive(false);
         Subdiv.SetActive(true);
@@ -77,7 +77,6 @@ public class SelectButton : MonoBehaviour
         DesignPanel.SetActive(false);
         OutfitTurn = false;
         Hairturn = false;
-        EyeTurn = true;
         JewelTurn = false;
         PlayerController.instance.SetPos();
     }
@@ -149,7 +148,6 @@ public class SelectButton : MonoBehaviour
         DesignPanel.SetActive(false);
         OutfitTurn = false;
         Hairturn = false;
-        HMehndiTurn = true;
         JewelTurn = false;
         DesignSelect.SetActive(false);
         MehndiSelect.SetActive(true);
@@ -161,7 +159,6 @@ public class SelectButton : MonoBehaviour
         MakeupPanel.SetActive(true);
         HMehndiTurn = false;
         LMehndiTurn = false;
-        EyeTurn = true;
         DesignSelect.SetActive(true);
         MehndiSelect.SetActive(false);
         PlayerController.instance.SetPos();

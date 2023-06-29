@@ -52,7 +52,7 @@ public class OutfitSelect : MonoBehaviour
                         if (Distance.x < -swipeRange)
                         {
                             if (selectedOption == FirstIndex)
-                                return;
+                                selectedOption = lastIndex-1;
                             else
                                 selectedOption--;
                             updateOutfit(selectedOption);
@@ -82,25 +82,33 @@ public class OutfitSelect : MonoBehaviour
         Swipe();
     }
     public void OnClickTradButton()
-    {
+    {   
+        SelectButton.OutfitTurn = true;
         selectedOption = 0;
         updateOutfit(selectedOption);
         lastIndex = 10;
         FirstIndex = 0;
     }
     public void OnClickCasualButton()
-    {
+    {   
+        SelectButton.OutfitTurn = true;
         selectedOption = 10;
         updateOutfit(selectedOption);
-        lastIndex = 20;
+        lastIndex = 17;
         FirstIndex = 10;
     }
     public void OnClickModernButton()
-    {
+    {   
+        SelectButton.OutfitTurn = true;
         selectedOption = 20;
         updateOutfit(selectedOption);
-        lastIndex = 30;
+        lastIndex = db.outfits.Length;
         FirstIndex = 20;
+    }
+    public void OnClickOutfit()
+    {
+        lastIndex = 30;
+        FirstIndex = 0;
     }
 
     public void OnLockOutfit()

@@ -55,7 +55,7 @@ public class EyebrowSelect : MonoBehaviour
                     if (Distance.x < -swipeRange)
                     {
                         if (selectedOption == 0)
-                            return;
+                            selectedOption = db.eyebrows.Length - 1;
                         else
                             selectedOption--;
                         updateyebrows(selectedOption);

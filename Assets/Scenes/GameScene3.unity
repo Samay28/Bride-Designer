@@ -868,6 +868,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1663587759}
+        m_TargetAssemblyTypeName: OutfitSelect, Assembly-CSharp
+        m_MethodName: OnClickOutfit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &213130023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2639,7 +2651,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -2
+  m_SortingOrder: -6
   m_Sprite: {fileID: 21300000, guid: ebf14abd1dc1ad24e89d3cab9003e2c5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2882,6 +2894,7 @@ MonoBehaviour:
   - {fileID: 596441130}
   - {fileID: 1727523523}
   - {fileID: 1524573247}
+  - {fileID: 617413878}
 --- !u!1 &842205199
 GameObject:
   m_ObjectHideFlags: 0
@@ -6007,10 +6020,70 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 3.474
       objectReference: {fileID: 0}
+    - target: {fileID: 503520408139252549, guid: aaffbb260e692d84eb0fbabeb9cb01e6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 503520408139252549, guid: aaffbb260e692d84eb0fbabeb9cb01e6, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 503520408139252549, guid: aaffbb260e692d84eb0fbabeb9cb01e6, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 503520408139252549, guid: aaffbb260e692d84eb0fbabeb9cb01e6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.081
+      objectReference: {fileID: 0}
+    - target: {fileID: 503520408139252549, guid: aaffbb260e692d84eb0fbabeb9cb01e6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.461
+      objectReference: {fileID: 0}
+    - target: {fileID: 503520408139252550, guid: aaffbb260e692d84eb0fbabeb9cb01e6, type: 3}
+      propertyPath: m_Size.x
+      value: 8.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 503520408139252550, guid: aaffbb260e692d84eb0fbabeb9cb01e6, type: 3}
+      propertyPath: m_Size.y
+      value: 13.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 503520408139252550, guid: aaffbb260e692d84eb0fbabeb9cb01e6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6d4e91018e2d34648b21b311c283582a, type: 3}
+    - target: {fileID: 503520408139252550, guid: aaffbb260e692d84eb0fbabeb9cb01e6, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 503520408365428522, guid: aaffbb260e692d84eb0fbabeb9cb01e6, type: 3}
+      propertyPath: m_SortingOrder
+      value: -2
+      objectReference: {fileID: 0}
     - target: {fileID: 503520409111442985, guid: aaffbb260e692d84eb0fbabeb9cb01e6, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 6c9ba63f067aa1442b3dc3118955abec, type: 3}
+    - target: {fileID: 503520409166834104, guid: aaffbb260e692d84eb0fbabeb9cb01e6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.34312037
+      objectReference: {fileID: 0}
+    - target: {fileID: 503520409166834104, guid: aaffbb260e692d84eb0fbabeb9cb01e6, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.27197
+      objectReference: {fileID: 0}
+    - target: {fileID: 503520409166834104, guid: aaffbb260e692d84eb0fbabeb9cb01e6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0605
+      objectReference: {fileID: 0}
+    - target: {fileID: 503520409166834104, guid: aaffbb260e692d84eb0fbabeb9cb01e6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.775
+      objectReference: {fileID: 0}
+    - target: {fileID: 503520409176632492, guid: aaffbb260e692d84eb0fbabeb9cb01e6, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 503520409182472086, guid: aaffbb260e692d84eb0fbabeb9cb01e6, type: 3}
       propertyPath: m_Name
       value: BrideDesign
@@ -6726,6 +6799,10 @@ PrefabInstance:
     - target: {fileID: 2094947758228709452, guid: 3a365db29f104be4ea3791b4b369a8ba, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2094947758228709454, guid: 3a365db29f104be4ea3791b4b369a8ba, type: 3}
+      propertyPath: endZ
+      value: -2.4
       objectReference: {fileID: 0}
     - target: {fileID: 2094947758228709552, guid: 3a365db29f104be4ea3791b4b369a8ba, type: 3}
       propertyPath: m_Name

@@ -57,7 +57,7 @@ public class HandMehndiSelect : MonoBehaviour
                     if (Distance.x < -swipeRange)
                     {
                         if (selectedOption == 0)
-                            return;
+                            selectedOption = db.handMehndis.Length - 1;
                         else
                             selectedOption--;
                         updateHMehndi(selectedOption);

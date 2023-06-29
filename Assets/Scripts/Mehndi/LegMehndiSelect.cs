@@ -57,7 +57,7 @@ public class LegMehndiSelect : MonoBehaviour
                     if (Distance.x < -swipeRange)
                     {
                         if (selectedOption == 0)
-                            return;
+                            selectedOption = db.LegMehndis.Length - 1;
                         else
                             selectedOption--;
                         updateLMehndi(selectedOption);

@@ -52,7 +52,7 @@ public class HairstyleSelect : MonoBehaviour
                     if (Distance.x < -swipeRange)
                     {
                         if (selectedOption == 0)
-                            return;
+                            selectedOption = 10;
                         else
                             selectedOption--;
                         updateHairstyle(selectedOption);
